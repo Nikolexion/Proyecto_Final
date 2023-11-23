@@ -2,7 +2,7 @@ package Logica.Habitat;
 
 import java.util.ArrayList;
 
-public class Habitat {
+public abstract class Habitat {
     private ArrayList<String> aceptaPkmn;
     public Habitat() {
         aceptaPkmn = new ArrayList<>();
