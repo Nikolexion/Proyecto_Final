@@ -1,6 +1,7 @@
 package Logica_Grafica;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -26,6 +27,11 @@ public class PanelPrincipal extends JPanel {
                 panelHabitat.clicked(e);
             }
         });
+
+    }
+    @Override
+    public void paint(Graphics g){
+        super.paint(g);
 
     }
 }

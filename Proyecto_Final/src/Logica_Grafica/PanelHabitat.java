@@ -1,6 +1,7 @@
 package Logica_Grafica;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 
 public class PanelHabitat extends JPanel {
@@ -8,7 +9,7 @@ public class PanelHabitat extends JPanel {
     HabitatBosque HabitatBosque;
     HabitatCielo HabitatCielo;
     HabitatCueva HabitatCueva;
-    HabitatFabrica HabitatFabrica;
+    HabitatElectrico HabitatElectrico;
     HabitatHielo HabitatHielo;
     HabitatHumedal HabitatHumedal;
     HabitatLava HabitatLava;
@@ -16,7 +17,8 @@ public class PanelHabitat extends JPanel {
     HabitatPrado HabitatPrado;
     HabitatSetas HabitatSetas;
     HabitatSiniestro HabitatSiniestro;
-    Zona zonaAgua, ZonaBosque, ZonaCielo, ZonaCueva, ZonaFabrica, ZonaHielo, ZonaHumedal, ZonaLava, ZonaLucha, ZonaPrado, ZonaSetas, ZonaSiniestro;
+    Zona ZonaAgua, ZonaBosque, ZonaCielo, ZonaCueva, ZonaFabrica, ZonaHielo, ZonaHumedal, ZonaLava, ZonaLucha, ZonaPrado, ZonaSetas, ZonaSiniestro;
+    Image ImagenAgua, ImagenBosque, ImagenCielo, ImagenCueva, ImagenFabrica, ImagenHielo, ImagenHumedal, ImagenLava, ImagenLucha, ImagenPrado, ImagenSetas, ImagenSiniestro;
     public PanelHabitat() {
         IniciarHabitats();
         IniciarZonas();
@@ -29,7 +31,7 @@ public class PanelHabitat extends JPanel {
         HabitatBosque = new HabitatBosque();
         HabitatCielo = new HabitatCielo();
         HabitatCueva = new HabitatCueva();
-        HabitatFabrica = new HabitatFabrica();
+        HabitatElectrico = new HabitatElectrico();
         HabitatHielo = new HabitatHielo();
         HabitatHumedal = new HabitatHumedal();
         HabitatLava = new HabitatLava();
@@ -40,9 +42,14 @@ public class PanelHabitat extends JPanel {
     }
     public void IniciarZonas(){
         JButton botonAgua = new JButton();
-        zonaAgua = new Zona(300,30,300,300,botonAgua);
+        ZonaAgua = new Zona(300,30,300,300,botonAgua);
         add(botonAgua);
         JButton botonBosque = new JButton();
 
+
+    }
+    public void paint(Graphics g){
+        super.paint(g);
+        ImagenAgua = new ImageIcon().getImage();
     }
 }
