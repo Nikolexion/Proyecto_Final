@@ -1,5 +1,7 @@
 package Logica;
 
+import Logica.Habitat.Habitat;
+
 import javax.swing.*;
 import java.awt.*;
 

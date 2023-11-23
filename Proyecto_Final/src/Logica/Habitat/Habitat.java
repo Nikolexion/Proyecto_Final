@@ -1,4 +1,4 @@
-package Logica;
+package Logica.Habitat;
 
 import java.util.ArrayList;
 

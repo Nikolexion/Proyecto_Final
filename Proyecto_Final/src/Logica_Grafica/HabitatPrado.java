@@ -1,6 +1,6 @@
 package Logica_Grafica;
 
-import Logica.*;
+import Logica.Habitat.Habitat;
 
 public class HabitatPrado {
     Habitat habitat;
