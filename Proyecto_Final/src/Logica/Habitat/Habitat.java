@@ -1,23 +1,18 @@
 package Logica.Habitat;
 
 import java.util.ArrayList;
+import javax.swing.*;
+import java.awt.*;
 
 public abstract class Habitat {
-    private ArrayList<String> aceptaPkmn;
-    public Habitat() {
-        aceptaPkmn = new ArrayList<>();
+    private Image image;
+    private ArrayList<String> aceptaPokemon;
+    public Habitat(Image image){
+        this.image = image;
     }
-    public void addPkmn(String[] nuevoPkmn){
-        for (int i = 0; i < nuevoPkmn.length; i++){
-            aceptaPkmn.add(nuevoPkmn[i]);
-        }
+    public abstract boolean permitePokemon(String nombrePokemon);
+    public Image getImage(){
+        return image;
     }
-    public boolean aceptaPkmn(String pkmn){
-        for (int i = 0; i < aceptaPkmn.size(); i++){
-            if (pkmn.equals(aceptaPkmn.get(i))){
-                return true;
-            }
-        }
-        return false;
-    }
+
 }
