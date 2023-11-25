@@ -1,6 +1,7 @@
 package Logica_Grafica;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -9,6 +10,7 @@ public class PanelPrincipal extends JPanel {
     PanelHabitat panelHabitat;
 
     public PanelPrincipal() {
+        panelHabitat = new PanelHabitat();
         this.setSize(1800,880);
 
         JFrame frame = new JFrame();
@@ -18,7 +20,6 @@ public class PanelPrincipal extends JPanel {
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setExtendedState(frame.MAXIMIZED_BOTH);
-        panelHabitat = new PanelHabitat();
 
         addMouseListener(new MouseAdapter() {
             @Override
@@ -26,6 +27,12 @@ public class PanelPrincipal extends JPanel {
                 panelHabitat.clicked(e);
             }
         });
+
+    }
+    @Override
+    public void paint(Graphics g){
+        super.paint(g);
+        panelHabitat.paint(g);
 
     }
 }
