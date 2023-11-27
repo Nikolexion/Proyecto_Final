@@ -126,8 +126,7 @@ public class PanelHabitat extends JPanel {
         g.drawImage(ImagenSiniestro,1220,420,300,195,this);
 
 
-        g.drawImage(ImagenBosque,0,0,250,880,this);
-        g.drawImage(ImagenBosque,0,630,1800,180,this);
+
 
 
     }
