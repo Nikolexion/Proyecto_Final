@@ -1,5 +1,5 @@
 package Logica_Grafica;
-import Logica.*;
+import Logica.Habitat.Habitat;
 
 import javax.swing.*;
 

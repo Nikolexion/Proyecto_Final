@@ -1,4 +1,8 @@
-package Logica;public class Main {
+package Logica;
+
+import Logica.Habitat.Habitat;
+
+public class Main {
     public static void main(String[] args) {
         Habitat habitat = new Habitat();
         String[] pkmn = {"Pikachu", "Oddish", "Mudkip", "Lotad", "Charmander"};
