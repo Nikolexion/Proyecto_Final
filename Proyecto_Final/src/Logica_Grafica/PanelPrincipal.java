@@ -25,6 +25,16 @@ public class PanelPrincipal extends JPanel {
         frame.setExtendedState(frame.MAXIMIZED_BOTH);
         add(panelMenuVert.listaAgua);
         add(panelMenuVert.listaBosque);
+        add(panelMenuVert.listaCielo);
+        add(panelMenuVert.listaCueva);
+        add(panelMenuVert.listaElectrico);
+        add(panelMenuVert.listaHielo);
+        add(panelMenuVert.listaHumedal);
+        add(panelMenuVert.listaLava);
+        add(panelMenuVert.listaLucha);
+        add(panelMenuVert.listaPrado);
+        add(panelMenuVert.listaSetas);
+        add(panelMenuVert.listaSiniestro);
 
 
         addMouseListener(new MouseAdapter() {
@@ -44,6 +54,16 @@ public class PanelPrincipal extends JPanel {
         panelMenuVert.paint(g);
         panelMenuVert.listaAgua.setBounds(25,35,100,30);
         panelMenuVert.listaBosque.setBounds(25,75,100,30);
+        panelMenuVert.listaCielo.setBounds(25,115,100,30);
+        panelMenuVert.listaCueva.setBounds(25,155,100,30);
+        panelMenuVert.listaElectrico.setBounds(25,195,100,30);
+        panelMenuVert.listaHielo.setBounds(25,235,100,30);
+        panelMenuVert.listaHumedal.setBounds(25,275,100,30);
+        panelMenuVert.listaLava.setBounds(25,315,100,30);
+        panelMenuVert.listaLucha.setBounds(25,355,100,30);
+        panelMenuVert.listaPrado.setBounds(25,395,100,30);
+        panelMenuVert.listaSetas.setBounds(25,435,100,30);
+        panelMenuVert.listaSiniestro.setBounds(25,475,100,30);
 
 
 
