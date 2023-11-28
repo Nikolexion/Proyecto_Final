@@ -3,7 +3,8 @@ package Logica;
 import java.util.ArrayList;
 
 public class Inventario <T>{
-    ArrayList<T> inventario;
+    private ArrayList<T> inventario;
+    private int dinero;
     public Inventario() {
         inventario = new ArrayList<>();
     }
@@ -15,5 +16,14 @@ public class Inventario <T>{
 
     public void setObjeto(T item) {
         this.inventario.add(item);
+    }
+    public void sumarDinero(int ganancias){
+        this.dinero += ganancias;
+    }
+    public void restarDinero(int gastos){
+        this.dinero -= gastos;
+    }
+    public int getDinero(){
+        return this.dinero;
     }
 }

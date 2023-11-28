@@ -27,8 +27,7 @@ public class PanelMenuVert extends JPanel {
         listaAgua.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(listaAgua.getSelectedItem());
-                System.out.println(listaAgua.getSelectedIndex());
+                clickListas(e,0);
             }
         });
         this.add(listaAgua);
@@ -39,8 +38,7 @@ public class PanelMenuVert extends JPanel {
         listaBosque.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(listaBosque.getSelectedItem());
-                System.out.println(listaBosque.getSelectedIndex());
+                clickListas(e,1);
             }
         });
         String[] pkmnsCielo = {"Pidgey", "Pidgeotto", "Pidgeot", "Dratini", "Dragonair", "Dragonite", "Lugia", "Ho-Oh","Swablu", "Altaria",
@@ -49,7 +47,7 @@ public class PanelMenuVert extends JPanel {
         listaCielo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                clickListas(e,2);
             }
         });
 
@@ -59,7 +57,7 @@ public class PanelMenuVert extends JPanel {
         listaCueva.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                clickListas(e,3);
             }
         });
 
@@ -68,7 +66,7 @@ public class PanelMenuVert extends JPanel {
         listaElectrico.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                clickListas(e,4);
             }
         });
 
@@ -77,7 +75,7 @@ public class PanelMenuVert extends JPanel {
         listaHielo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                clickListas(e,5);
             }
         });
 
@@ -87,7 +85,7 @@ public class PanelMenuVert extends JPanel {
         listaHumedal.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                clickListas(e,6);
             }
         });
 
@@ -97,7 +95,7 @@ public class PanelMenuVert extends JPanel {
         listaLava.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                clickListas(e,7);
             }
         });
 
@@ -106,7 +104,7 @@ public class PanelMenuVert extends JPanel {
         listaLucha.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                clickListas(e,8);
             }
         });
 
@@ -115,7 +113,7 @@ public class PanelMenuVert extends JPanel {
         listaPrado.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                clickListas(e,9);
             }
         });
 
@@ -124,7 +122,7 @@ public class PanelMenuVert extends JPanel {
         listaSetas.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                clickListas(e,10);
             }
         });
 
@@ -134,8 +132,49 @@ public class PanelMenuVert extends JPanel {
         listaSiniestro.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                clickListas(e,11);
             }
         });
+    }
+    private void clickListas(ActionEvent e, int nroLista){
+        switch (nroLista){
+            case 0:
+
+
+                break;
+            case 1:
+
+                break;
+            case 2:
+
+                break;
+            case 3:
+
+                break;
+            case 4:
+
+                break;
+            case 5:
+
+                break;
+            case  6:
+
+                break;
+            case 7:
+
+                break;
+            case 8:
+
+                break;
+            case 9:
+
+                break;
+            case 10:
+
+                break;
+            case 11:
+
+                break;
+        }
     }
 }
