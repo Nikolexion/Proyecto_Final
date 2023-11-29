@@ -1,5 +1,8 @@
 package Logica_Grafica;
 
+import Logica.Inventario;
+import Logica.Pokocho;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,17 +11,19 @@ import java.awt.event.ActionListener;
 public class PanelMenuVert extends JPanel {
     JComboBox<String> listaAgua,listaBosque,listaCielo,listaCueva,listaElectrico,listaHielo,listaHumedal,listaLava,listaLucha,listaPrado,
                         listaSetas,listaSiniestro;
+    JButton comprarComida;
+    Inventario inventario;
     private Image menu;
     public PanelMenuVert() {
         this.iniciarListas();
-        String[] habitats = {"Squirtle","Wartortle", "Blastoise", "Magikarp", "Gyarados", "Lapras", "Omanyte", "Omastar",
-                "Totodile", "Croconaw", "Feraligatr", "Suicune", "Kyogre"};
-
+        inventario = new Inventario<>();
     }
     public void paint(Graphics g){
         super.paint(g);
         menu = new ImageIcon("resources/MenuBackground.png").getImage();
 //        g.drawImage(menu,0,0,250,880,this);
+
+
     }
     private void iniciarListas(){
         String[] pkmnsAgua = {"Squirtle","Wartortle", "Blastoise", "Magikarp", "Gyarados", "Lapras", "Omanyte", "Omastar",
@@ -133,6 +138,14 @@ public class PanelMenuVert extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 clickListas(e,11);
+            }
+        });
+
+        comprarComida = new JButton("Comprar Comida");
+        comprarComida.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                inventario.addObjeto(new Pokocho());
             }
         });
     }

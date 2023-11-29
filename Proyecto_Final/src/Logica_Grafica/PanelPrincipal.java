@@ -35,6 +35,7 @@ public class PanelPrincipal extends JPanel {
         add(panelMenuVert.listaPrado);
         add(panelMenuVert.listaSetas);
         add(panelMenuVert.listaSiniestro);
+        add(panelMenuVert.comprarComida);
 
 
         addMouseListener(new MouseAdapter() {
@@ -64,6 +65,7 @@ public class PanelPrincipal extends JPanel {
         panelMenuVert.listaPrado.setBounds(25,395,100,30);
         panelMenuVert.listaSetas.setBounds(25,435,100,30);
         panelMenuVert.listaSiniestro.setBounds(25,475,100,30);
+        panelMenuVert.comprarComida.setBounds(25, 515,150,100);
 
 
 
