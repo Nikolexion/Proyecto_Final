@@ -1,52 +1,118 @@
 package Logica_Grafica;
 
+import Logica.Comedero;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
 public class PanelHabitat extends JPanel {
-    HabitatAgua HabitatAgua;
-    HabitatBosque HabitatBosque;
-    HabitatCielo HabitatCielo;
-    HabitatCueva HabitatCueva;
-    HabitatElectrico HabitatElectrico;
-    HabitatHielo HabitatHielo;
-    HabitatHumedal HabitatHumedal;
-    HabitatLava HabitatLava;
-    HabitatLucha HabitatLucha;
-    HabitatPrado HabitatPrado;
-    HabitatSetas HabitatSetas;
-    HabitatSiniestro HabitatSiniestro;
-    Zona ZonaAgua, ZonaBosque, ZonaCielo, ZonaCueva, ZonaElectrico, ZonaHielo, ZonaHumedal, ZonaLava, ZonaLucha, ZonaPrado, ZonaSetas, ZonaSiniestro;
-    Image ImagenAgua, ImagenBosque, ImagenCielo, ImagenCueva, ImagenElectrico, ImagenHielo, ImagenHumedal, ImagenLava, ImagenLucha, ImagenPrado, ImagenSetas, ImagenSiniestro;
+    private HabitatAgua HabitatAgua;
+    private HabitatBosque HabitatBosque;
+    private HabitatCielo HabitatCielo;
+    private HabitatCueva HabitatCueva;
+    private HabitatElectrico HabitatElectrico;
+    private HabitatHielo HabitatHielo;
+    private HabitatHumedal HabitatHumedal;
+    private HabitatLava HabitatLava;
+    private HabitatLucha HabitatLucha;
+    private HabitatPrado HabitatPrado;
+    private HabitatSetas HabitatSetas;
+    private HabitatSiniestro HabitatSiniestro;
+    private Zona ZonaAgua, ZonaBosque, ZonaCielo, ZonaCueva, ZonaElectrico, ZonaHielo, ZonaHumedal, ZonaLava, ZonaLucha, ZonaPrado, ZonaSetas, ZonaSiniestro;
+    private Image ImagenAgua, ImagenBosque, ImagenCielo, ImagenCueva, ImagenElectrico, ImagenHielo, ImagenHumedal, ImagenLava, ImagenLucha,
+            ImagenPrado, ImagenSetas, ImagenSiniestro;
+    private Comedero comederoAgua, comederoBosque, comederoCielo, comederoCueva, comederoElectrico, comederoHielo, comederoHumedal, comederoLava,
+                comederoLucha, comederoPrado, comederoSetas, comederoSiniestro;
+    private Boolean alimentar;
     public PanelHabitat() {
         IniciarHabitats();
         IniciarZonas();
     }
     public void clicked(MouseEvent e){
         if (ZonaAgua.contienePunto(e.getX(),e.getY())){
+            if (alimentar){
+
+            }else {
+
+            }
             System.out.println("Agua");
         } else if (ZonaBosque.contienePunto(e.getX(),e.getY())) {
+            if (alimentar){
+
+            }else {
+
+            }
             System.out.println("Bosque");
         } else if (ZonaCielo.contienePunto(e.getX(),e.getY())){
+            if (alimentar){
+
+            }else {
+
+            }
             System.out.println("Cielo");
         } else if (ZonaCueva.contienePunto(e.getX(),e.getY())) {
+            if (alimentar){
+
+            }else {
+
+            }
             System.out.println("Cueva");
         } else if (ZonaElectrico.contienePunto(e.getX(),e.getY())) {
+            if (alimentar){
+
+            }else {
+
+            }
             System.out.println("Electrico");
         } else if (ZonaHielo.contienePunto(e.getX(),e.getY())) {
+            if (alimentar){
+
+            }else {
+
+            }
             System.out.println("Hielo");
         } else if (ZonaHumedal.contienePunto(e.getX(),e.getY())) {
+            if (alimentar){
+
+            }else {
+
+            }
             System.out.println("Humedal");
         } else if (ZonaLava.contienePunto(e.getX(),e.getY())) {
+            if (alimentar){
+
+            }else {
+
+            }
             System.out.println("Lava");
         } else if (ZonaLucha.contienePunto(e.getX(),e.getY())) {
+            if (alimentar){
+
+            }else {
+
+            }
             System.out.println("Lucha");
         } else if (ZonaPrado.contienePunto(e.getX(),e.getY())) {
+            if (alimentar){
+
+            }else {
+
+            }
             System.out.println("Prado");
         } else if (ZonaSetas.contienePunto(e.getX(),e.getY())) {
+            if (alimentar){
+
+            }else {
+
+            }
             System.out.println("Setas");
         } else if (ZonaSiniestro.contienePunto(e.getX(),e.getY())) {
+            if (alimentar){
+
+            }else {
+
+            }
             System.out.println("Siniestro");
         }
 
@@ -64,6 +130,19 @@ public class PanelHabitat extends JPanel {
         HabitatPrado = new HabitatPrado();
         HabitatSetas = new HabitatSetas();
         HabitatSiniestro = new HabitatSiniestro();
+
+        comederoAgua = new Comedero();
+        comederoBosque = new Comedero();
+        comederoCielo = new Comedero();
+        comederoCueva = new Comedero();
+        comederoElectrico = new Comedero();
+        comederoHielo = new Comedero();
+        comederoHumedal = new Comedero();
+        comederoLava = new Comedero();
+        comederoLucha = new Comedero();
+        comederoPrado = new Comedero();
+        comederoSetas = new Comedero();
+        comederoSiniestro = new Comedero();
     }
     public void IniciarZonas(){
         JButton botonAgua = new JButton();
@@ -124,6 +203,23 @@ public class PanelHabitat extends JPanel {
         g.drawImage(ImagenPrado,1220,10,300,195,this);
         g.drawImage(ImagenSetas,1220,215,300,195,this);
         g.drawImage(ImagenSiniestro,1220,420,300,195,this);
+
+        g.drawImage(comederoAgua.getImage(),260,165,300,40,this);
+        g.drawImage(comederoBosque.getImage(),260,370,300,40,this);
+        g.drawImage(comederoCielo.getImage(),260,575,300,40,this);
+
+        g.drawImage(comederoCueva.getImage(),580,165,300,40,this);
+        g.drawImage(comederoElectrico.getImage(),580,370,300,40,this);
+        g.drawImage(comederoHielo.getImage(),580,575,300,40,this);
+
+        g.drawImage(comederoHumedal.getImage(),900,165,300,40,this);
+        g.drawImage(comederoLava.getImage(),900,370,300,40,this);
+        g.drawImage(comederoLucha.getImage(),900,575,300,40,this);
+
+        g.drawImage(comederoPrado.getImage(),1220,165,300,40,this);
+        g.drawImage(comederoSetas.getImage(),1220,370,300,40,this);
+        g.drawImage(comederoSiniestro.getImage(),1220,575,300,40,this);
+
 
 
 
