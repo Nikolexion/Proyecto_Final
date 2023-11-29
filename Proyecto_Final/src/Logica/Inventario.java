@@ -14,7 +14,7 @@ public class Inventario <T>{
         return inventario.get(0);
     }
 
-    public void setObjeto(T item) {
+    public void addObjeto(T item) {
         this.inventario.add(item);
     }
     public void sumarDinero(int ganancias){

@@ -1,4 +1,4 @@
-package Logica_Grafica;
+package Logica;
 
 import Logica.Comida;
 
@@ -7,19 +7,23 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class Comedero {
-    public ArrayList<Comida> comedero;
-    public Image image;
+    private ArrayList<Comida> comedero;
+    private Image image;
 
     public Comedero() {
-        comedero = new ArrayList<>();
-        image = new ImageIcon("resources/Comedero.png").getImage();
+        this.comedero = new ArrayList<>();
+        this.image = new ImageIcon("resources/Comedero.png").getImage();
     }
 
-    public Comida getComedero() {
-        return this.comedero.get(0);
+    public Comida getComida() {
+        return this.comedero.remove(0);
     }
 
     public void addComida(Comida comida) {
         this.comedero.add(comida);
+    }
+
+    public Image getImage() {
+        return image;
     }
 }

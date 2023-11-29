@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class Pokocho extends Comida{
     private boolean Comido;
-    public Image image;
+    private Image image;
     public Pokocho() {
         this.Comido = false;
         image = new ImageIcon("resources/Pokocho.png").getImage();
@@ -14,5 +14,9 @@ public class Pokocho extends Comida{
     @Override
     public void comer() {
         this.Comido = true;
+    }
+
+    public Image getImage() {
+        return image;
     }
 }
