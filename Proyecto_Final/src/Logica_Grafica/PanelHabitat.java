@@ -20,6 +20,8 @@ public class PanelHabitat extends JPanel {
     private HabitatSetas HabitatSetas;
     private HabitatSiniestro HabitatSiniestro;
     private Zona ZonaAgua, ZonaBosque, ZonaCielo, ZonaCueva, ZonaElectrico, ZonaHielo, ZonaHumedal, ZonaLava, ZonaLucha, ZonaPrado, ZonaSetas, ZonaSiniestro;
+    private Zona ZonaComederoAgua, ZonaComederoBosque, ZonaComederoCielo, ZonaComederoCueva, ZonaComederoElectrico, ZonaComederoHielo,
+            ZonaComederoHumedal, ZonaComederoLava, ZonaComederoLucha, ZonaComederoPrado, ZonaComederoSetas, ZonaComederoSiniestro;
     private Image ImagenAgua, ImagenBosque, ImagenCielo, ImagenCueva, ImagenElectrico, ImagenHielo, ImagenHumedal, ImagenLava, ImagenLucha,
             ImagenPrado, ImagenSetas, ImagenSiniestro;
     private Comedero comederoAgua, comederoBosque, comederoCielo, comederoCueva, comederoElectrico, comederoHielo, comederoHumedal, comederoLava,
@@ -131,45 +133,33 @@ public class PanelHabitat extends JPanel {
         HabitatSetas = new HabitatSetas();
         HabitatSiniestro = new HabitatSiniestro();
 
-        comederoAgua = new Comedero();
-        comederoBosque = new Comedero();
-        comederoCielo = new Comedero();
-        comederoCueva = new Comedero();
-        comederoElectrico = new Comedero();
-        comederoHielo = new Comedero();
-        comederoHumedal = new Comedero();
-        comederoLava = new Comedero();
-        comederoLucha = new Comedero();
-        comederoPrado = new Comedero();
-        comederoSetas = new Comedero();
-        comederoSiniestro = new Comedero();
+        comederoAgua = HabitatAgua.getComederoAgua();
+        comederoBosque = HabitatBosque.getComederoBosque();
+        comederoCielo = HabitatCielo.getComederoCielo();
+        comederoCueva = HabitatCueva.getComederoCueva();
+        comederoElectrico = HabitatElectrico.getComederoElectrico();
+        comederoHielo = HabitatHielo.getComederoHielo();
+        comederoHumedal = HabitatHumedal.getComederoHumedal();
+        comederoLava = HabitatLava.getComederoLava();
+        comederoLucha = HabitatLucha.getComederoLucha();
+        comederoPrado = HabitatPrado.getComederoPrado();
+        comederoSetas = HabitatSetas.getComederoSetas();
+        comederoSiniestro = HabitatSiniestro.getComederoSiniestro();
     }
     public void IniciarZonas(){
-        JButton botonAgua = new JButton();
-        ZonaAgua = new Zona(260,10,300,195,botonAgua);
-        add(botonAgua);
-        JButton botonBosque = new JButton();
-        ZonaBosque = new Zona(260,215,300,195,botonBosque);
-        JButton botonCielo = new JButton();
-        ZonaCielo = new Zona(260,420,300,195,botonCielo);
-        JButton botonCueva = new JButton();
-        ZonaCueva = new Zona(580,10,300,195,botonCueva);
-        JButton botonElectrico = new JButton();
-        ZonaElectrico = new Zona(580,215,300,195,botonElectrico);
-        JButton botonHielo = new JButton();
-        ZonaHielo = new Zona(580,420,300,195,botonHielo);
-        JButton botonHumedal = new JButton();
-        ZonaHumedal = new Zona(900,10,300,195,botonHumedal);
-        JButton botonLava = new JButton();
-        ZonaLava = new Zona(900,215,300,195,botonLava);
-        JButton botonLucha = new JButton();
-        ZonaLucha = new Zona(900,420,300,195,botonLucha);
-        JButton botonPrado = new JButton();
-        ZonaPrado = new Zona(1220,10,300,195,botonPrado);
-        JButton botonSetas = new JButton();
-        ZonaSetas = new Zona(1220,215,300,195,botonSetas);
-        JButton botonSiniestro = new JButton();
-        ZonaSiniestro = new Zona(1220,420,300,195,botonSiniestro);
+        ZonaAgua = HabitatAgua.getZona();
+        ZonaBosque = HabitatBosque.getZona();
+        ZonaCielo = HabitatCielo.getZona();
+        ZonaCueva = HabitatCueva.getZona();
+        ZonaElectrico = HabitatElectrico.getZona();
+        ZonaHielo = HabitatHielo.getZona();
+        ZonaHumedal = HabitatHumedal.getZona();
+        ZonaLava = HabitatLava.getZona();
+        ZonaLucha = HabitatLucha.getZona();
+        ZonaPrado = HabitatPrado.getZona();
+        ZonaSetas = HabitatSetas.getZona();
+        ZonaSiniestro = HabitatSiniestro.getZona();
+
 
 
     }
@@ -203,6 +193,8 @@ public class PanelHabitat extends JPanel {
         g.drawImage(ImagenPrado,1220,10,300,195,this);
         g.drawImage(ImagenSetas,1220,215,300,195,this);
         g.drawImage(ImagenSiniestro,1220,420,300,195,this);
+
+
 
         g.drawImage(comederoAgua.getImage(),260,165,300,40,this);
         g.drawImage(comederoBosque.getImage(),260,370,300,40,this);
