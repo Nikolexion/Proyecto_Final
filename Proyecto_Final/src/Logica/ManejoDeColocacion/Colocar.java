@@ -1,4 +1,4 @@
-package Logica;
+package Logica.ManejoDeColocacion;
 
 abstract public class Colocar {
     private boolean colocar;
