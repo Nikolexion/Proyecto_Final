@@ -1,5 +1,7 @@
 package Logica.Habitat;
 
+import Logica.Comedero;
+
 import java.util.ArrayList;
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +10,7 @@ import java.util.List;
 public class Electrico extends Habitat {
     private List<String> pokemonesPermitidos;
     private Image image;
-
+    private Comedero comedero;
     public Electrico(){
         super(new ImageIcon("resources/Ambientes/Electrico.jpg").getImage());
         this.image = new ImageIcon("resources/Ambientes/Electrico.jpg").getImage();
@@ -19,6 +21,7 @@ public class Electrico extends Habitat {
         for (String pokemon : permitidosElectrico){
             pokemonesPermitidos.add(pokemon);
         }
+        comedero = new Comedero();
     }
 
     public Image getImage() {

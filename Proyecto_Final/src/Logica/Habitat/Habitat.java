@@ -1,5 +1,7 @@
 package Logica.Habitat;
 
+import Logica.Comedero;
+
 import java.util.ArrayList;
 import javax.swing.*;
 import java.awt.*;
@@ -7,6 +9,7 @@ import java.awt.*;
 public abstract class Habitat {
     private Image image;
     private ArrayList<String> aceptaPokemon;
+    private Comedero comedero;
     public Habitat(Image image){
         this.image = image;
     }

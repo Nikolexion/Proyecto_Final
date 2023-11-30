@@ -1,5 +1,7 @@
 package Logica.Habitat;
 
+import Logica.Comedero;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;
@@ -8,6 +10,7 @@ import java.awt.*;
 public class Agua extends Habitat {
     private List<String> pokemonesPermitidos;
     private Image image;
+    private Comedero comedero;
 
     public Agua(){
         super(new ImageIcon("resources/Ambientes/Agua.jpg").getImage());
@@ -20,6 +23,7 @@ public class Agua extends Habitat {
         for (String pokemon : permitidosAgua){
             pokemonesPermitidos.add(pokemon);
         }
+        comedero = new Comedero();
     }
 
     public Image getImage() {
