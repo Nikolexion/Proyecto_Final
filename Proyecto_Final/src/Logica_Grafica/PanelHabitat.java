@@ -165,18 +165,18 @@ public class PanelHabitat extends JPanel {
     }
     public void paint(Graphics g){
         super.paint(g);
-        ImagenAgua = new ImageIcon("resources/Ambientes/Agua.jpg").getImage();
-        ImagenBosque = new ImageIcon("resources/Ambientes/Bosque.jpg").getImage();
-        ImagenCielo = new ImageIcon("resources/Ambientes/Cielo.jpg").getImage();
-        ImagenCueva = new ImageIcon("resources/Ambientes/Cueva.jpg").getImage();
-        ImagenElectrico = new ImageIcon("resources/Ambientes/Electrico.jpg").getImage();
-        ImagenHielo = new ImageIcon("resources/Ambientes/Hielo.jpg").getImage();
-        ImagenHumedal = new ImageIcon("resources/Ambientes/Humedal.jpg").getImage();
-        ImagenLava = new ImageIcon("resources/Ambientes/Lava.jpg").getImage();
-        ImagenLucha = new ImageIcon("resources/Ambientes/Lucha.jpg").getImage();
-        ImagenPrado = new ImageIcon("resources/Ambientes/Prado.jpg").getImage();
-        ImagenSetas = new ImageIcon("resources/Ambientes/Setas.jpg").getImage();
-        ImagenSiniestro = new ImageIcon("resources/Ambientes/Siniestro.jpg").getImage();
+        ImagenAgua = HabitatAgua.getImagen();
+        ImagenBosque = HabitatBosque.getImagen();
+        ImagenCielo = HabitatCielo.getImagen();
+        ImagenCueva = HabitatCueva.getImagen();
+        ImagenElectrico = HabitatElectrico.getImagen();
+        ImagenHielo = HabitatHielo.getImagen();
+        ImagenHumedal = HabitatHumedal.getImagen();
+        ImagenLava = HabitatLava.getImagen();
+        ImagenLucha = HabitatLucha.getImagen();
+        ImagenPrado = HabitatPrado.getImagen();
+        ImagenSetas = HabitatSetas.getImagen();
+        ImagenSiniestro = HabitatSiniestro.getImagen();
 
         g.drawImage(ImagenAgua,260,10,300,195,this);
         g.drawImage(ImagenBosque,260,215,300,195,this);

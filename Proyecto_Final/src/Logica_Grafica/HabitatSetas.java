@@ -2,20 +2,29 @@ package Logica_Grafica;
 
 import Logica.Comedero;
 import Logica.Habitat.Habitat;
+import Logica.Habitat.Setas;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class HabitatSetas {
-    Habitat habitat;
+    Setas setas;
     private Zona zona, zonaComedero;
     private Comedero comederoSetas;
+    private int x,y,ancho,alto;
 
     public HabitatSetas() {
+        setas = new Setas();
         comederoSetas = new Comedero();
         JButton boton = new JButton();
-        zona = new Zona(1220,215,300,195,boton);
+        x = 1220;
+        y = 215;
+        ancho = 300;
+        alto = 195;
+        zona = new Zona(x,y,ancho,alto,boton);
         JButton botonComida = new JButton();
-        zonaComedero = new Zona(1220,370,300,40,botonComida);
+        zonaComedero = new Zona(x,y + 155,ancho,40,botonComida);
+        comederoSetas.setZona(zonaComedero);
     }
 
     public Zona getZona() {
@@ -28,5 +37,8 @@ public class HabitatSetas {
 
     public Comedero getComederoSetas() {
         return comederoSetas;
+    }
+    public Image getImagen() {
+        return setas.getImage();
     }
 }

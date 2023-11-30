@@ -2,20 +2,29 @@ package Logica_Grafica;
 
 import Logica.Comedero;
 import Logica.Habitat.Habitat;
+import Logica.Habitat.Hielo;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class HabitatHielo {
-    Habitat habitat;
+    Hielo hielo;
     private Zona zona, zonaComedero;
     private Comedero comederoHielo;
+    private int x,y,ancho,alto;
 
     public HabitatHielo() {
+        hielo = new Hielo();
         comederoHielo = new Comedero();
         JButton boton = new JButton();
-        zona = new Zona(580,420,300,195,boton);
+        x = 580;
+        y = 420;
+        ancho = 300;
+        alto = 195;
+        zona = new Zona(x,y,ancho,alto,boton);
         JButton botonComida = new JButton();
-        zonaComedero = new Zona(580,575,300,40,botonComida);
+        zonaComedero = new Zona(x,y + 155,ancho,40,botonComida);
+        comederoHielo.setZona(zonaComedero);
     }
 
     public Zona getZona() {
@@ -28,5 +37,8 @@ public class HabitatHielo {
 
     public Comedero getComederoHielo() {
         return comederoHielo;
+    }
+    public Image getImagen() {
+        return hielo.getImage();
     }
 }

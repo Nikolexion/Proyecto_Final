@@ -1,21 +1,30 @@
 package Logica_Grafica;
 
 import Logica.Comedero;
+import Logica.Habitat.Electrico;
 import Logica.Habitat.Habitat;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class HabitatElectrico {
-    Habitat habitat;
+    Electrico electrico;
     private Zona zona, zonaComedero;
     private Comedero comederoElectrico;
+    private int x,y,ancho,alto;
 
     public HabitatElectrico() {
+        electrico = new Electrico();
         comederoElectrico = new Comedero();
         JButton boton = new JButton();
-        zona = new Zona(580,215,300,195,boton);
+        x = 580;
+        y = 215;
+        ancho = 300;
+        alto = 195;
+        zona = new Zona(x,y,ancho,alto,boton);
         JButton botonComida = new JButton();
-        zonaComedero = new Zona(580,370,300,40,botonComida);
+        zonaComedero = new Zona(x,y + 155,ancho,40,botonComida);
+        comederoElectrico.setZona(zonaComedero);
     }
 
     public Zona getZona() {
@@ -28,5 +37,9 @@ public class HabitatElectrico {
 
     public Comedero getComederoElectrico() {
         return comederoElectrico;
+    }
+
+    public Image getImagen() {
+        return electrico.getImage();
     }
 }

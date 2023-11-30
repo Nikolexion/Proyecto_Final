@@ -1,21 +1,30 @@
 package Logica_Grafica;
 
 import Logica.Comedero;
+import Logica.Habitat.Cueva;
 import Logica.Habitat.Habitat;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class HabitatCueva {
-    Habitat habitat;
+    Cueva cueva;
     private Zona zona, zonaComedero;
     private Comedero comederoCueva;
+    private int x,y,ancho,alto;
 
     public HabitatCueva() {
+        cueva = new Cueva();
         comederoCueva = new Comedero();
         JButton boton = new JButton();
-        zona = new Zona(580,10,300,195,boton);
+        x = 580;
+        y = 10;
+        ancho = 300;
+        alto = 195;
+        zona = new Zona(x,y,ancho,alto,boton);
         JButton botonComida = new JButton();
-        zonaComedero = new Zona(580,165,300,40,botonComida);
+        zonaComedero = new Zona(x,y + 155,ancho,40,botonComida);
+        comederoCueva.setZona(zonaComedero);
     }
 
     public Zona getZona() {
@@ -28,5 +37,9 @@ public class HabitatCueva {
 
     public Comedero getComederoCueva() {
         return comederoCueva;
+    }
+
+    public Image getImagen() {
+        return cueva.getImage();
     }
 }

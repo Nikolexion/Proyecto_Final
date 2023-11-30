@@ -2,20 +2,29 @@ package Logica_Grafica;
 
 import Logica.Comedero;
 import Logica.Habitat.Habitat;
+import Logica.Habitat.Lucha;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class HabitatLucha {
-    Habitat habitat;
+    Lucha lucha;
     private Zona zona, zonaComedero;
     private Comedero comederoLucha;
+    private int x,y,ancho,alto;
 
     public HabitatLucha() {
+        lucha = new Lucha();
         comederoLucha = new Comedero();
         JButton boton = new JButton();
-        zona = new Zona(900,420,300,195,boton);
+        x = 900;
+        y = 420;
+        ancho = 300;
+        alto = 195;
+        zona = new Zona(x,y,ancho,alto,boton);
         JButton botonComida = new JButton();
-        zonaComedero = new Zona(900,575,300,40,botonComida);
+        zonaComedero = new Zona(x,y + 155,ancho,40,botonComida);
+        comederoLucha.setZona(zonaComedero);
     }
 
     public Zona getZona() {
@@ -28,5 +37,8 @@ public class HabitatLucha {
 
     public Comedero getComederoLucha() {
         return comederoLucha;
+    }
+    public Image getImagen() {
+        return lucha.getImage();
     }
 }
