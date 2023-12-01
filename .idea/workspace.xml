@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="101ecc17-261a-4465-87dd-440b9f24971d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Comidas/Frambu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Comidas/Latano.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Comidas/Pinia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Animal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Comedero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Comedero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Comida.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Comidas/Comida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Inventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/ManejoDeColocacion/Colocar.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/ManejoDeColocacion/Colocar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/ManejoDeColocacion/ColocarComida.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/ManejoDeColocacion/ColocarComida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Pokocho.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Comidas/Pokocho.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelAnimal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelHabitat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelHabitat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelMenuHorz.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelMenuHorz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelMenuVert.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelMenuVert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Baya_Frambu.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Baya_Frambu.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

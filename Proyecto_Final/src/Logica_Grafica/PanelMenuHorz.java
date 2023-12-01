@@ -12,7 +12,7 @@ public class PanelMenuHorz extends JPanel {
     public void paint(Graphics g){
         super.paint(g);
         menu = new ImageIcon("resources/MenuBackground.png").getImage();
-        g.drawImage(menu,0,630,1700,180,this);
+//        g.drawImage(menu,0,630,1700,180,this);
 
     }
 }

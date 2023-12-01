@@ -1,5 +1,8 @@
 package Logica_Grafica;
 
+import Logica.Comidas.Frambu;
+import Logica.Comidas.Latano;
+import Logica.Comidas.Pinia;
 import Logica.Inventario;
 import Logica.ManejoDeColocacion.ColocarComida;
 import Logica.Comidas.Pokocho;
@@ -18,6 +21,7 @@ public class PanelMenuVert extends JPanel {
     private Image menu;
     public PanelMenuVert() {
         this.iniciarListas();
+        this.iniciarComidas();
         inventario = new Inventario();
         colocarComida = ColocarComida.getInstance();
     }
@@ -144,6 +148,9 @@ public class PanelMenuVert extends JPanel {
             }
         });
 
+
+    }
+    public void iniciarComidas(){
         comprarPokocho = new JToggleButton();
         comprarPokocho.setBounds(25, 515,98,123);
         ImageIcon imagenPokocho= new ImageIcon("resources/Pokocho.png");
@@ -165,6 +172,82 @@ public class PanelMenuVert extends JPanel {
                     comprarPokocho.setIcon(finalImagenPokochoOFF);
                 } else {
                     comprarPokocho.setIcon(finalImagenPokocho);
+                }
+            }
+        });
+
+        comprarFrambu = new JToggleButton();
+        comprarFrambu.setBounds(150,515,98,123);
+        ImageIcon imagenFrambu = new ImageIcon("resources/Baya_Frambu.png");
+        imagenFrambu = new ImageIcon(imagenFrambu.getImage().getScaledInstance(comprarFrambu.getWidth(),comprarFrambu.getHeight(),Image.SCALE_SMOOTH));
+        ImageIcon imagenFrambuOFF = new ImageIcon("resources/Baya_FrambuOFF.png");
+        imagenFrambuOFF = new ImageIcon(imagenFrambuOFF.getImage().getScaledInstance(comprarFrambu.getWidth(),comprarFrambu.getHeight(),Image.SCALE_SMOOTH));
+        comprarFrambu.setContentAreaFilled(false);
+        comprarFrambu.setBorderPainted(false);
+
+        ImageIcon finalimagenFrambu = imagenFrambu;
+        ImageIcon finalimagenFrambuOFF = imagenFrambuOFF;
+        comprarFrambu.setIcon(imagenFrambu);
+        comprarFrambu.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (comprarFrambu.isSelected()){
+                    inventario.addComida(new Frambu());
+                    colocarComida.setComida(inventario.getComida());
+                    comprarFrambu.setIcon(finalimagenFrambuOFF);
+                } else {
+                    comprarFrambu.setIcon(finalimagenFrambu);
+                }
+            }
+        });
+
+        comprarPinia = new JToggleButton();
+        comprarPinia.setBounds(25,655,98,123);
+        ImageIcon imagenPinia = new ImageIcon("resources/Baya_Pinia.png");
+        imagenPinia = new ImageIcon(imagenPinia.getImage().getScaledInstance(comprarPinia.getWidth(),comprarPinia.getHeight(),Image.SCALE_SMOOTH));
+        ImageIcon imagenPiniaOFF = new ImageIcon("resources/Baya_PiniaOFF.png");
+        imagenPiniaOFF = new ImageIcon(imagenPiniaOFF.getImage().getScaledInstance(comprarPinia.getWidth(),comprarPinia.getHeight(),Image.SCALE_SMOOTH));
+        comprarPinia.setContentAreaFilled(false);
+        comprarPinia.setBorderPainted(false);
+
+        ImageIcon finalimagenPinia = imagenPinia;
+        ImageIcon finalimagenPiniaOFF = imagenPiniaOFF;
+        comprarPinia.setIcon(imagenPinia);
+        comprarPinia.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (comprarPinia.isSelected()){
+                    inventario.addComida(new Pinia());
+                    colocarComida.setComida(inventario.getComida());
+                    comprarPinia.setIcon(finalimagenPiniaOFF);
+                } else {
+                    comprarPinia.setIcon(finalimagenPinia);
+                }
+
+            }
+        });
+
+        comprarLatano = new JToggleButton();
+        comprarLatano.setBounds(150,655,98,123);
+        ImageIcon imagenLatano = new ImageIcon("resources/Baya_Latano.png");
+        imagenLatano = new ImageIcon(imagenLatano.getImage().getScaledInstance(comprarLatano.getWidth(),comprarLatano.getHeight(),Image.SCALE_SMOOTH));
+        ImageIcon imagenLatanoOFF = new ImageIcon("resources/Baya_LatanoOFF.png");
+        imagenLatanoOFF = new ImageIcon(imagenLatanoOFF.getImage().getScaledInstance(comprarLatano.getWidth(),comprarLatano.getHeight(),Image.SCALE_SMOOTH));
+        comprarLatano.setContentAreaFilled(false);
+        comprarLatano.setBorderPainted(false);
+
+        ImageIcon finalimagenLatano = imagenLatano;
+        ImageIcon finalimagenLatanoOFF = imagenLatanoOFF;
+        comprarLatano.setIcon(imagenLatano);
+        comprarLatano.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (comprarLatano.isSelected()) {
+                    inventario.addComida(new Latano());
+                    colocarComida.setComida(inventario.getComida());
+                    comprarLatano.setIcon(finalimagenLatanoOFF);
+                } else {
+                    comprarLatano.setIcon(finalimagenLatano);
                 }
             }
         });
