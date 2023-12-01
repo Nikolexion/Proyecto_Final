@@ -1,8 +1,7 @@
 package Logica_Grafica;
 
-import Logica.Comedero;
+import Logica.Comidas.Comedero;
 import Logica.ManejoDeColocacion.ColocarComida;
-import Logica.Comidas.Pokocho;
 
 import javax.swing.*;
 import java.awt.*;
@@ -35,7 +34,7 @@ public class PanelHabitat extends JPanel {
     public void clicked(MouseEvent e){
         if (ZonaAgua.contienePunto(e.getX(),e.getY())){
             if (colocarComida.estado()){
-                comederoAgua.addComida(new Pokocho());
+                comederoAgua.addComida(colocarComida.queComida());
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
             }else {
@@ -44,77 +43,98 @@ public class PanelHabitat extends JPanel {
 
         } else if (ZonaBosque.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-
+                comederoBosque.addComida(colocarComida.queComida());
+                System.out.println("Comida agregada");
+                colocarComida.setDesativado();
             }else {
 
                 System.out.println("Bosque");
             }
         } else if (ZonaCielo.contienePunto(e.getX(),e.getY())){
             if (colocarComida.estado()){
-
+                comederoCielo.addComida(colocarComida.queComida());
+                System.out.println("Comida agregada");
+                colocarComida.setDesativado();
             }else {
 
                 System.out.println("Cielo");
             }
         } else if (ZonaCueva.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-
+                comederoCueva.addComida(colocarComida.queComida());
+                System.out.println("Comida agregada");
+                colocarComida.setDesativado();
             }else {
 
                 System.out.println("Cueva");
             }
         } else if (ZonaElectrico.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-
+                comederoElectrico.addComida(colocarComida.queComida());
+                System.out.println("Comida agregada");
+                colocarComida.setDesativado();
             }else {
 
                 System.out.println("Electrico");
             }
         } else if (ZonaHielo.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-
+                comederoHielo.addComida(colocarComida.queComida());
+                System.out.println("Comida agregada");
+                colocarComida.setDesativado();
             }else {
 
                 System.out.println("Hielo");
             }
         } else if (ZonaHumedal.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-
+                comederoHumedal.addComida(colocarComida.queComida());
+                System.out.println("Comida agregada");
+                colocarComida.setDesativado();
             }else {
 
                 System.out.println("Humedal");
             }
         } else if (ZonaLava.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-
+                comederoLava.addComida(colocarComida.queComida());
+                colocarComida.setDesativado();
             }else {
 
                 System.out.println("Lava");
             }
         } else if (ZonaLucha.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-
+                comederoLucha.addComida(colocarComida.queComida());
+                System.out.println("Comida agregada");
+                colocarComida.setDesativado();
             }else {
 
                 System.out.println("Lucha");
             }
         } else if (ZonaPrado.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-
+                comederoPrado.addComida(colocarComida.queComida());
+                System.out.println("Comida agregada");
+                colocarComida.setDesativado();
             }else {
 
                 System.out.println("Prado");
             }
         } else if (ZonaSetas.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-
+                comederoSetas.addComida(colocarComida.queComida());
+                System.out.println("Comida agregada");
+                colocarComida.setDesativado();
             }else {
 
                 System.out.println("Setas");
             }
         } else if (ZonaSiniestro.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-
+                comederoSiniestro.addComida(colocarComida.queComida());
+                System.out.println("Comida agregada");
+                colocarComida.setDesativado();
             }else {
 
                 System.out.println("Siniestro");
@@ -215,10 +235,9 @@ public class PanelHabitat extends JPanel {
         g.drawImage(comederoSetas.getImage(),1220,370,300,40,this);
         g.drawImage(comederoSiniestro.getImage(),1220,575,300,40,this);
 
-
-
-
-
-
+        paintComidas(g);
+    }
+    public void paintComidas(Graphics g){
+        HabitatAgua.paintComida(g);
     }
 }

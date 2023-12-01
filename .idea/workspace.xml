@@ -6,10 +6,36 @@
   <component name="ChangeListManager">
     <list default="true" id="101ecc17-261a-4465-87dd-440b9f24971d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelMenuHorz.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelMenuHorz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelMenuVert.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelMenuVert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Comedero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Comidas/Comedero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Comidas/Comida.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Comidas/Comida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Comidas/Pokocho.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Comidas/Pokocho.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Agua.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Agua.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Bosque.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Bosque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Cielo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Cielo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Cueva.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Cueva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Electrico.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Electrico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Habitat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Habitat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Hielo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Hielo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Humedal.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Humedal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Lava.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Lava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Lucha.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Lucha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Prado.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Prado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Setas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Setas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Siniestro.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica/Habitat/Siniestro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatAgua.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatAgua.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatBosque.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatBosque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatCielo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatCielo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatCueva.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatCueva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatElectrico.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatElectrico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatHielo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatHielo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatHumedal.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatHumedal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatLava.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatLava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatLucha.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatLucha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatPrado.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatPrado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatSetas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatSetas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatSiniestro.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/HabitatSiniestro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelHabitat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelHabitat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/Logica_Grafica/PanelPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Baya_Frambu.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Baya_Frambu.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

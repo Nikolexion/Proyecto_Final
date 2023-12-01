@@ -1,6 +1,6 @@
 package Logica.Habitat;
 
-import Logica.Comedero;
+import Logica.Comidas.Comedero;
 
 import java.util.ArrayList;
 import javax.swing.*;
