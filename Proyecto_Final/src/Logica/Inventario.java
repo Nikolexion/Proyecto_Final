@@ -1,21 +1,25 @@
 package Logica;
 
+import Logica.Comidas.Comida;
+
 import java.util.ArrayList;
 
-public class Inventario <T>{
-    private ArrayList<T> inventario;
+public class Inventario {
+    private ArrayList<Comida> inventario;
     private int dinero;
     public Inventario() {
         inventario = new ArrayList<>();
     }
 
-    public T getInventario() {
-
-        return inventario.get(0);
+    public ArrayList<Comida> getInventario() {
+        return inventario;
     }
 
-    public void addObjeto(T item) {
-        this.inventario.add(item);
+    public void addComida(Comida comida) {
+        this.inventario.add(comida);
+    }
+    public Comida getComida(){
+        return inventario.remove(0);
     }
     public void sumarDinero(int ganancias){
         this.dinero += ganancias;

@@ -13,6 +13,7 @@ abstract public class Colocar {
     public void setDesativado(){
         colocar = false;
     }
+    public boolean estado(){return colocar;}
 
     public int getX() {
         return x;

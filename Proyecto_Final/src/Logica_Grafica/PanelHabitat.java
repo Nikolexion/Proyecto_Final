@@ -1,6 +1,8 @@
 package Logica_Grafica;
 
 import Logica.Comedero;
+import Logica.ManejoDeColocacion.ColocarComida;
+import Logica.Comidas.Pokocho;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,102 +22,103 @@ public class PanelHabitat extends JPanel {
     private HabitatSetas HabitatSetas;
     private HabitatSiniestro HabitatSiniestro;
     private Zona ZonaAgua, ZonaBosque, ZonaCielo, ZonaCueva, ZonaElectrico, ZonaHielo, ZonaHumedal, ZonaLava, ZonaLucha, ZonaPrado, ZonaSetas, ZonaSiniestro;
-    private Zona ZonaComederoAgua, ZonaComederoBosque, ZonaComederoCielo, ZonaComederoCueva, ZonaComederoElectrico, ZonaComederoHielo,
-            ZonaComederoHumedal, ZonaComederoLava, ZonaComederoLucha, ZonaComederoPrado, ZonaComederoSetas, ZonaComederoSiniestro;
     private Image ImagenAgua, ImagenBosque, ImagenCielo, ImagenCueva, ImagenElectrico, ImagenHielo, ImagenHumedal, ImagenLava, ImagenLucha,
             ImagenPrado, ImagenSetas, ImagenSiniestro;
     private Comedero comederoAgua, comederoBosque, comederoCielo, comederoCueva, comederoElectrico, comederoHielo, comederoHumedal, comederoLava,
                 comederoLucha, comederoPrado, comederoSetas, comederoSiniestro;
-    private Boolean alimentar;
+    public ColocarComida colocarComida;
     public PanelHabitat() {
+        colocarComida = ColocarComida.getInstance();
         IniciarHabitats();
         IniciarZonas();
     }
     public void clicked(MouseEvent e){
         if (ZonaAgua.contienePunto(e.getX(),e.getY())){
-            if (alimentar){
-
+            if (colocarComida.estado()){
+                comederoAgua.addComida(new Pokocho());
+                System.out.println("Comida agregada");
+                colocarComida.setDesativado();
             }else {
-
+                System.out.println("Agua");
             }
-            System.out.println("Agua");
+
         } else if (ZonaBosque.contienePunto(e.getX(),e.getY())) {
-            if (alimentar){
+            if (colocarComida.estado()){
 
             }else {
 
+                System.out.println("Bosque");
             }
-            System.out.println("Bosque");
         } else if (ZonaCielo.contienePunto(e.getX(),e.getY())){
-            if (alimentar){
+            if (colocarComida.estado()){
 
             }else {
 
+                System.out.println("Cielo");
             }
-            System.out.println("Cielo");
         } else if (ZonaCueva.contienePunto(e.getX(),e.getY())) {
-            if (alimentar){
+            if (colocarComida.estado()){
 
             }else {
 
+                System.out.println("Cueva");
             }
-            System.out.println("Cueva");
         } else if (ZonaElectrico.contienePunto(e.getX(),e.getY())) {
-            if (alimentar){
+            if (colocarComida.estado()){
 
             }else {
 
+                System.out.println("Electrico");
             }
-            System.out.println("Electrico");
         } else if (ZonaHielo.contienePunto(e.getX(),e.getY())) {
-            if (alimentar){
+            if (colocarComida.estado()){
 
             }else {
 
+                System.out.println("Hielo");
             }
-            System.out.println("Hielo");
         } else if (ZonaHumedal.contienePunto(e.getX(),e.getY())) {
-            if (alimentar){
+            if (colocarComida.estado()){
 
             }else {
 
+                System.out.println("Humedal");
             }
-            System.out.println("Humedal");
         } else if (ZonaLava.contienePunto(e.getX(),e.getY())) {
-            if (alimentar){
+            if (colocarComida.estado()){
 
             }else {
 
+                System.out.println("Lava");
             }
-            System.out.println("Lava");
         } else if (ZonaLucha.contienePunto(e.getX(),e.getY())) {
-            if (alimentar){
+            if (colocarComida.estado()){
 
             }else {
 
+                System.out.println("Lucha");
             }
-            System.out.println("Lucha");
         } else if (ZonaPrado.contienePunto(e.getX(),e.getY())) {
-            if (alimentar){
+            if (colocarComida.estado()){
 
             }else {
 
+                System.out.println("Prado");
             }
-            System.out.println("Prado");
         } else if (ZonaSetas.contienePunto(e.getX(),e.getY())) {
-            if (alimentar){
+            if (colocarComida.estado()){
 
             }else {
 
+                System.out.println("Setas");
             }
-            System.out.println("Setas");
         } else if (ZonaSiniestro.contienePunto(e.getX(),e.getY())) {
-            if (alimentar){
+            if (colocarComida.estado()){
 
             }else {
 
+                System.out.println("Siniestro");
             }
-            System.out.println("Siniestro");
         }
 
     }

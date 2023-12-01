@@ -1,4 +1,4 @@
-package Logica;
+package Logica.Comidas;
 
 public abstract class Comida {
     private boolean Comido;

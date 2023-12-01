@@ -1,17 +1,20 @@
 package Logica_Grafica;
 
+import Logica.ManejoDeColocacion.ColocarComida;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class PanelPrincipal extends JPanel {
-    PanelAnimal panelAnimal;
     PanelHabitat panelHabitat;
     PanelMenuVert panelMenuVert;
     PanelMenuHorz panelMenuHorz;
+    ColocarComida colocarComida;
 
     public PanelPrincipal() {
+        colocarComida = ColocarComida.getInstance();
         panelHabitat = new PanelHabitat();
         panelMenuVert = new PanelMenuVert();
         panelMenuHorz = new PanelMenuHorz();
@@ -23,6 +26,7 @@ public class PanelPrincipal extends JPanel {
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setExtendedState(frame.MAXIMIZED_BOTH);
+        frame.setBackground(Color.WHITE);
         add(panelMenuVert.listaAgua);
         add(panelMenuVert.listaBosque);
         add(panelMenuVert.listaCielo);
@@ -35,7 +39,7 @@ public class PanelPrincipal extends JPanel {
         add(panelMenuVert.listaPrado);
         add(panelMenuVert.listaSetas);
         add(panelMenuVert.listaSiniestro);
-        add(panelMenuVert.comprarComida);
+        add(panelMenuVert.comprarPokocho);
 
 
         addMouseListener(new MouseAdapter() {
@@ -65,7 +69,7 @@ public class PanelPrincipal extends JPanel {
         panelMenuVert.listaPrado.setBounds(25,395,100,30);
         panelMenuVert.listaSetas.setBounds(25,435,100,30);
         panelMenuVert.listaSiniestro.setBounds(25,475,100,30);
-        panelMenuVert.comprarComida.setBounds(25, 515,150,100);
+        panelMenuVert.comprarPokocho.setBounds(25, 515,98,123);
 
 
 

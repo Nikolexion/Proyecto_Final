@@ -1,4 +1,4 @@
-package Logica;
+package Logica.Comidas;
 
 import javax.swing.*;
 import java.awt.*;

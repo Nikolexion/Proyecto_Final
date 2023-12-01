@@ -1,7 +1,8 @@
 package Logica_Grafica;
 
 import Logica.Inventario;
-import Logica.Pokocho;
+import Logica.ManejoDeColocacion.ColocarComida;
+import Logica.Comidas.Pokocho;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,12 +12,14 @@ import java.awt.event.ActionListener;
 public class PanelMenuVert extends JPanel {
     JComboBox<String> listaAgua,listaBosque,listaCielo,listaCueva,listaElectrico,listaHielo,listaHumedal,listaLava,listaLucha,listaPrado,
                         listaSetas,listaSiniestro;
-    JButton comprarComida;
+    JToggleButton comprarPokocho, comprarFrambu, comprarPinia, comprarLatano;
+    ColocarComida colocarComida;
     Inventario inventario;
     private Image menu;
     public PanelMenuVert() {
         this.iniciarListas();
-        inventario = new Inventario<>();
+        inventario = new Inventario();
+        colocarComida = ColocarComida.getInstance();
     }
     public void paint(Graphics g){
         super.paint(g);
@@ -141,11 +144,28 @@ public class PanelMenuVert extends JPanel {
             }
         });
 
-        comprarComida = new JButton("Comprar Comida");
-        comprarComida.addActionListener(new ActionListener() {
+        comprarPokocho = new JToggleButton();
+        comprarPokocho.setBounds(25, 515,98,123);
+        ImageIcon imagenPokocho= new ImageIcon("resources/Pokocho.png");
+        imagenPokocho = new ImageIcon(imagenPokocho.getImage().getScaledInstance(comprarPokocho.getWidth(),comprarPokocho.getHeight(),Image.SCALE_SMOOTH));
+        ImageIcon imagenPokochoOFF= new ImageIcon("resources/PokochoOFF.png");
+        imagenPokochoOFF = new ImageIcon(imagenPokochoOFF.getImage().getScaledInstance(comprarPokocho.getWidth(),comprarPokocho.getHeight(),Image.SCALE_SMOOTH));
+        comprarPokocho.setContentAreaFilled(false);
+        comprarPokocho.setBorderPainted(false);
+
+        ImageIcon finalImagenPokochoOFF = imagenPokochoOFF;
+        ImageIcon finalImagenPokocho = imagenPokocho;
+        comprarPokocho.setIcon(imagenPokocho);
+        comprarPokocho.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                inventario.addObjeto(new Pokocho());
+                if (comprarPokocho.isSelected()) {
+                    inventario.addComida(new Pokocho());
+                    colocarComida.setComida(inventario.getComida());
+                    comprarPokocho.setIcon(finalImagenPokochoOFF);
+                } else {
+                    comprarPokocho.setIcon(finalImagenPokocho);
+                }
             }
         });
     }
