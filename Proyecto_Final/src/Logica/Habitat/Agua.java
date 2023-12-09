@@ -11,7 +11,7 @@ public class Agua extends Habitat {
     private Comedero comedero;
 
     public Agua(){
-        super(new ImageIcon("resources/Ambientes/Agua.jpg").getImage());
+        super(new ImageIcon("resources/Ambientes/Agua.jpg").getImage(), EnumComidas.PINIA);
         this.image = new ImageIcon("resources/Ambientes/Agua.jpg").getImage();
         comedero = new Comedero();
     }
@@ -19,7 +19,10 @@ public class Agua extends Habitat {
     public Image getImage() {
         return image;
     }
-
+    @Override
+    public boolean permiteComida(Comida comida){
+        return comida.getEnumComidas() == EnumComidas.PINIA;
+    }
     @Override
     public boolean permitePokemon(Pokemon pokemon) {
         return pokemon.getTipo() == Tipo.AGUA;
