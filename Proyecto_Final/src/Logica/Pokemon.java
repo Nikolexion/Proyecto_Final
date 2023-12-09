@@ -7,20 +7,19 @@ import java.awt.*;
 
 public class Pokemon {
     private String nombre;
-    private Habitat habitat;
     private Image image;
-    public Pokemon (String nombre, Habitat habitat, String path){
-        this.nombre = nombre;
-        this.habitat = habitat;
-        this.image = new ImageIcon(path).getImage();
+    private Tipo tipo;
+    public Pokemon (DetallePokemon pokemon){
+        this.nombre = pokemon.getNombre();
+        this.tipo = pokemon.getTipo();
+        this.image = pokemon.getImagen();
     }
 
     public String getNombre() {
         return nombre;
     }
-
-    public Habitat getHabitat() {
-        return habitat;
+    public Tipo getTipo(){
+        return tipo;
     }
     public Image getImage() {
         return image;
