@@ -7,6 +7,7 @@ public class Pinia extends Comida{
     private boolean Comido;
     private Image image;
     public Pinia() {
+        super(new ImageIcon("resources/Baya_Pinia.png").getImage());
         this.Comido = false;
         image = new ImageIcon("resources/Baya_Pinia.png").getImage();
     }

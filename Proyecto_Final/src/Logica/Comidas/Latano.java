@@ -7,6 +7,7 @@ public class Latano extends Comida {
     private boolean Comido;
     private Image image;
     public Latano() {
+        super(new ImageIcon("resources/Baya_Latano.png").getImage());
         this.Comido = false;
         image = new ImageIcon("resources/Baya_Latano.png").getImage();
     }

@@ -7,6 +7,7 @@ public class Frambu extends Comida{
     private boolean Comido;
     private Image image;
     public Frambu() {
+        super(new ImageIcon("resources/Baya_Frambu.png").getImage());
         this.Comido = false;
         image = new ImageIcon("resources/Baya_Frambu.png").getImage();
     }

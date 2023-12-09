@@ -7,6 +7,7 @@
         private boolean Comido;
         private Image image;
         public Pokocho() {
+            super(new ImageIcon("resources/Pokocho.png").getImage());
             this.Comido = false;
             image = new ImageIcon("resources/Pokocho.png").getImage();
         }
