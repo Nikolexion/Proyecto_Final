@@ -1,7 +1,5 @@
 package Logica_Grafica;
-import Logica.Comidas.Comedero;
-import Logica.Comidas.Comida;
-import Logica.Comidas.Pokocho;
+import Logica.Comidas.*;
 import Logica.Habitat.Agua;
 
 import javax.swing.*;
