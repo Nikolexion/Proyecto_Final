@@ -152,6 +152,7 @@ public class PanelHabitat extends JPanel {
                 System.out.println("Siniestro");
             }
         }
+        repaint();
 
     }
     public void IniciarHabitats(){
@@ -247,10 +248,6 @@ public class PanelHabitat extends JPanel {
         g.drawImage(comederoSetas.getImage(),1220,370,300,40,this);
         g.drawImage(comederoSiniestro.getImage(),1220,575,300,40,this);
 
-        paintComidas(g);
-        HabitatAgua.paintComida(g);
-    }
-    public void paintComidas(Graphics g){
-        HabitatAgua.paintComida(g);
+        HabitatAgua.paint(g);
     }
 }

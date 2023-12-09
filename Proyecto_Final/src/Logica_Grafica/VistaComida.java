@@ -17,7 +17,7 @@ public class VistaComida implements ImageObserver {
         Comida comida = comidas.get(0);
         if (comida != null){
 
-//            image = comida.getImagen();
+            image = comida.getImagen();
             switch (comidas.size()){
                 case 1:
                     g.drawImage(image,x,y, 30, 40, this);
@@ -74,7 +74,7 @@ public class VistaComida implements ImageObserver {
                 default:
                     break;
             }
-        }else System.out.println("mala tu wea");
+        }
     }
 
     @Override
