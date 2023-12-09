@@ -1,20 +1,21 @@
 package Logica.Habitat;
 
-import Logica.Comidas.Comedero;
+import Logica.*;
+import Logica.Comidas.*;
 
-import java.util.ArrayList;
 import java.awt.*;
 
 public abstract class Habitat {
     private Image image;
-    private ArrayList<String> aceptaPokemon;
     private Comedero comedero;
-    public Habitat(Image image){
+
+    public Habitat(Image image) {
         this.image = image;
     }
-    public abstract boolean permitePokemon(String nombrePokemon);
-    public Image getImage(){
+
+    public abstract boolean permitePokemon(Pokemon pokemon);
+
+    public Image getImage() {
         return image;
     }
-
 }
