@@ -169,18 +169,18 @@ public class PanelHabitat extends JPanel {
         HabitatSetas = new HabitatSetas();
         HabitatSiniestro = new HabitatSiniestro();
 
-        comederoAgua = HabitatAgua.getComederoAgua();
-        comederoBosque = HabitatBosque.getComederoBosque();
-        comederoCielo = HabitatCielo.getComederoCielo();
-        comederoCueva = HabitatCueva.getComederoCueva();
-        comederoElectrico = HabitatElectrico.getComederoElectrico();
-        comederoHielo = HabitatHielo.getComederoHielo();
-        comederoHumedal = HabitatHumedal.getComederoHumedal();
-        comederoLava = HabitatLava.getComederoLava();
-        comederoLucha = HabitatLucha.getComederoLucha();
-        comederoPrado = HabitatPrado.getComederoPrado();
-        comederoSetas = HabitatSetas.getComederoSetas();
-        comederoSiniestro = HabitatSiniestro.getComederoSiniestro();
+        comederoAgua = HabitatAgua.getComedero();
+        comederoBosque = HabitatBosque.getComedero();
+        comederoCielo = HabitatCielo.getComedero();
+        comederoCueva = HabitatCueva.getComedero();
+        comederoElectrico = HabitatElectrico.getComedero();
+        comederoHielo = HabitatHielo.getComedero();
+        comederoHumedal = HabitatHumedal.getComedero();
+        comederoLava = HabitatLava.getComedero();
+        comederoLucha = HabitatLucha.getComedero();
+        comederoPrado = HabitatPrado.getComedero();
+        comederoSetas = HabitatSetas.getComedero();
+        comederoSiniestro = HabitatSiniestro.getComedero();
     }
     public void IniciarZonas(){
         ZonaAgua = HabitatAgua.getZona();
@@ -249,5 +249,16 @@ public class PanelHabitat extends JPanel {
         g.drawImage(comederoSiniestro.getImage(),1220,575,300,40,this);
 
         HabitatAgua.paint(g);
+        HabitatBosque.paint(g);
+        HabitatCielo.paint(g);
+        HabitatCueva.paint(g);
+        HabitatElectrico.paint(g);
+        HabitatHielo.paint(g);
+        HabitatHumedal.paint(g);
+        HabitatLava.paint(g);
+        HabitatLucha.paint(g);
+        HabitatPrado.paint(g);
+        HabitatSetas.paint(g);
+        HabitatSiniestro.paint(g);
     }
 }

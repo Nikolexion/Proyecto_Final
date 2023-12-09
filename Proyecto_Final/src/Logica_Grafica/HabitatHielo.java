@@ -6,15 +6,19 @@ import Logica.Habitat.Hielo;
 import javax.swing.*;
 import java.awt.*;
 
-public class HabitatHielo {
+public class HabitatHielo extends JPanel{
     Hielo hielo;
     private Zona zona, zonaComedero;
-    private Comedero comederoHielo;
+    private Comedero comedero;
     private int x,y,ancho,alto;
+    private VistaComida vistaComida;
 
     public HabitatHielo() {
         hielo = new Hielo();
-        comederoHielo = new Comedero();
+        vistaComida = new VistaComida();
+        comedero = new Comedero();
+        comedero.addComida(new Frambu());
+        comedero.addComida(new Frambu());
         JButton boton = new JButton();
         x = 580;
         y = 420;
@@ -23,19 +27,23 @@ public class HabitatHielo {
         zona = new Zona(x,y,ancho,alto,boton);
         JButton botonComida = new JButton();
         zonaComedero = new Zona(x,y + 155,ancho,40,botonComida);
-        comederoHielo.setZona(zonaComedero);
+        comedero.setZona(zonaComedero);
     }
 
     public Zona getZona() {
         return zona;
     }
+    public void paint(Graphics g){
+        super.paint(g);
+        vistaComida.dibujarComidas(g,x + 5,y + 155, comedero.getComedero());
 
+    }
     public Zona getZonaComedero() {
         return zonaComedero;
     }
 
-    public Comedero getComederoHielo() {
-        return comederoHielo;
+    public Comedero getComedero() {
+        return comedero;
     }
     public Image getImagen() {
         return hielo.getImage();

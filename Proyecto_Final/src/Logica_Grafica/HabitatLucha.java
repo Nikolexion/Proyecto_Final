@@ -6,15 +6,19 @@ import Logica.Habitat.Lucha;
 import javax.swing.*;
 import java.awt.*;
 
-public class HabitatLucha {
+public class HabitatLucha extends JPanel{
     Lucha lucha;
     private Zona zona, zonaComedero;
-    private Comedero comederoLucha;
+    private Comedero comedero;
     private int x,y,ancho,alto;
+    private VistaComida vistaComida;
 
     public HabitatLucha() {
         lucha = new Lucha();
-        comederoLucha = new Comedero();
+        vistaComida = new VistaComida();
+        comedero = new Comedero();
+        comedero.addComida(new Latano());
+        comedero.addComida(new Latano());
         JButton boton = new JButton();
         x = 900;
         y = 420;
@@ -23,19 +27,23 @@ public class HabitatLucha {
         zona = new Zona(x,y,ancho,alto,boton);
         JButton botonComida = new JButton();
         zonaComedero = new Zona(x,y + 155,ancho,40,botonComida);
-        comederoLucha.setZona(zonaComedero);
+        comedero.setZona(zonaComedero);
     }
 
     public Zona getZona() {
         return zona;
     }
+    public void paint(Graphics g){
+        super.paint(g);
+        vistaComida.dibujarComidas(g,x + 5,y + 155, comedero.getComedero());
 
+    }
     public Zona getZonaComedero() {
         return zonaComedero;
     }
 
-    public Comedero getComederoLucha() {
-        return comederoLucha;
+    public Comedero getComedero() {
+        return comedero;
     }
     public Image getImagen() {
         return lucha.getImage();
