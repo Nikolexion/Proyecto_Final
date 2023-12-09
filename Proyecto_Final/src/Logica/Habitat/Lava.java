@@ -1,27 +1,17 @@
 package Logica.Habitat;
 
-import Logica.Comidas.Comedero;
+import Logica.*;
+import Logica.Comidas.*;
 
-import java.util.ArrayList;
 import javax.swing.*;
 import java.awt.*;
-import java.util.List;
 
 public class Lava extends Habitat {
-    private List<String> pokemonesPermitidos;
     private Image image;
     private Comedero comedero;
     public Lava(){
         super(new ImageIcon("resources/Ambientes/Lava.jpg").getImage());
         this.image = new ImageIcon("resources/Ambientes/Lava.jpg").getImage();
-        this.pokemonesPermitidos = new ArrayList<>();
-        String[] permitidosLava = {
-                "Charmander", "Charmeleon", "Charizard", "Cyndaquil", "Quilava",
-                "Typhlosion", "Entei", "Moltres", "Torchic", "Combusken",
-                "Blaziken", "Vulpix", "Ninetales"};
-        for (String pokemon : permitidosLava){
-            pokemonesPermitidos.add(pokemon);
-        }
         comedero = new Comedero();
     }
 
@@ -30,7 +20,7 @@ public class Lava extends Habitat {
     }
 
     @Override
-    public boolean permitePokemon(String nombrePokemon) {
-        return pokemonesPermitidos.contains(nombrePokemon);
+    public boolean permitePokemon(Pokemon pokemon) {
+        return pokemon.getTipo() == Tipo.LAVA;
     }
 }
