@@ -15,7 +15,7 @@ public class Comedero {
     public Comedero() {
         this.comedero = new ArrayList<>();
         this.image = new ImageIcon("resources/Comedero.png").getImage();
-        comedero.add(new Pokocho());
+        this.addComida(new Pokocho());
     }
 
     public Comida getComida() {
@@ -27,6 +27,7 @@ public class Comedero {
     }
 
     public void addComida(Comida comida) {
+        System.out.println("pokocho añadido");
         this.comedero.add(comida);
     }
 
