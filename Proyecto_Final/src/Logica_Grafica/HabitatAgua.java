@@ -12,15 +12,16 @@ public class HabitatAgua extends JPanel{
     private Zona zona, zonaComedero;
     private Comedero comederoAgua;
     private int x,y,ancho,alto;
-
+    private VistaComida vistaComida;
     public HabitatAgua() {
         agua = new Agua();
+        vistaComida = new VistaComida();
         comederoAgua = new Comedero();
+        ancho = 300;
+        alto = 195;
         JButton boton = new JButton();
         x = 260;
         y = 10;
-        ancho = 300;
-        alto = 195;
         zona = new Zona(x,y,ancho,alto,boton);
         JButton botonComida = new JButton();
         zonaComedero = new Zona(x,y + 155,ancho,40,botonComida);
@@ -33,38 +34,8 @@ public class HabitatAgua extends JPanel{
     }
     public void paint(Graphics g){
         super.paint(g);
-        paintComida(g);
+        vistaComida.dibujarComidas(g,x + 5,y + 155,comederoAgua.getComedero());
 
-    }
-    public void paintComida(Graphics g){
-        int count = comederoAgua.getComedero().size();
-        switch (count){
-            case 1:
-                Comida comida = comederoAgua.cualComida(0);
-                g.drawImage(comida.getImagen(), x+5,y+155,30,40,this);
-                break;
-            case 2:
-                g.drawImage(comederoAgua.cualComida(0).getImagen(), x+5,y+155,30,40,this);
-                g.drawImage(comederoAgua.cualComida(1).getImagen(), x+35,y+155,30,40,this);
-                break;
-            case 3:
-                g.drawImage(comederoAgua.cualComida(0).getImagen(), x+5,y+155,30,40,this);
-                g.drawImage(comederoAgua.cualComida(1).getImagen(), x+35,y+155,30,40,this);
-                g.drawImage(comederoAgua.cualComida(2).getImagen(), x+65,y+155,30,40,this);
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
-            case 8:
-                break;
-            default:
-                break;
-        }
     }
 
     public Zona getZonaComedero() {
