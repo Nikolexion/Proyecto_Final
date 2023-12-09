@@ -9,9 +9,9 @@ public class Pokemon {
     private String nombre;
     private Image image;
     private Tipo tipo;
-    public Pokemon (DetallePokemon pokemon, Tipo tipo){
+    public Pokemon (DetallePokemon pokemon){
         this.nombre = pokemon.getNombre();
-        this.tipo = tipo;
+        this.tipo = pokemon.getTipo();
         this.image = pokemon.getImagen();
     }
 

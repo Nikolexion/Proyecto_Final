@@ -154,11 +154,13 @@ public enum DetallePokemon {
     private String nombre;
     private int precio;
     private Image imagen;
+    private Tipo tipo;
 
     DetallePokemon(String nombre, int precio, Tipo tipo, String path){
         this.nombre = nombre;
         this.precio = precio;
         this.imagen = new ImageIcon(path).getImage();
+        this.tipo = tipo;
     }
     public String getNombre(){
         return nombre;
@@ -168,5 +170,8 @@ public enum DetallePokemon {
     }
     public Image getImagen() {
         return imagen;
+    }
+    public Tipo getTipo(){
+        return tipo;
     }
 }
