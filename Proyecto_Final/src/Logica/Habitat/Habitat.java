@@ -1,6 +1,7 @@
 package Logica.Habitat;
 
 import Logica.*;
+import Logica.Excepciones.HabitatNoPermitePokemon;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -14,11 +15,11 @@ public abstract class Habitat {
         arrayList = new ArrayList<>();
     }
     public abstract boolean permitePokemon(Pokemon pokemon);
-    public void addPokemon(Pokemon pokemon){
+    public void addPokemon(Pokemon pokemon) throws HabitatNoPermitePokemon {
         if (permitePokemon(pokemon)){
             this.arrayList.add(pokemon);
         } else {
-            System.out.println("Este pokemon no va en este habitat");
+            throw new HabitatNoPermitePokemon();
         }
     }
     public Pokemon getPokemon(Pokemon pokemon){
