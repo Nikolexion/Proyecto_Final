@@ -37,6 +37,7 @@ public class PanelHabitat extends JPanel {
                 comederoAgua.addComida(colocarComida.queComida());
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
+                repaint();
             }else {
                 System.out.println("Agua");
             }
@@ -46,6 +47,7 @@ public class PanelHabitat extends JPanel {
                 comederoBosque.addComida(colocarComida.queComida());
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
+                repaint();
             }else {
 
                 System.out.println("Bosque");
@@ -55,6 +57,7 @@ public class PanelHabitat extends JPanel {
                 comederoCielo.addComida(colocarComida.queComida());
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
+                repaint();
             }else {
 
                 System.out.println("Cielo");
@@ -64,6 +67,7 @@ public class PanelHabitat extends JPanel {
                 comederoCueva.addComida(colocarComida.queComida());
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
+                repaint();
             }else {
 
                 System.out.println("Cueva");
@@ -73,6 +77,7 @@ public class PanelHabitat extends JPanel {
                 comederoElectrico.addComida(colocarComida.queComida());
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
+                repaint();
             }else {
 
                 System.out.println("Electrico");
@@ -82,6 +87,7 @@ public class PanelHabitat extends JPanel {
                 comederoHielo.addComida(colocarComida.queComida());
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
+                repaint();
             }else {
 
                 System.out.println("Hielo");
@@ -91,6 +97,7 @@ public class PanelHabitat extends JPanel {
                 comederoHumedal.addComida(colocarComida.queComida());
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
+                repaint();
             }else {
 
                 System.out.println("Humedal");
@@ -99,6 +106,7 @@ public class PanelHabitat extends JPanel {
             if (colocarComida.estado()){
                 comederoLava.addComida(colocarComida.queComida());
                 colocarComida.setDesativado();
+                repaint();
             }else {
 
                 System.out.println("Lava");
@@ -108,6 +116,7 @@ public class PanelHabitat extends JPanel {
                 comederoLucha.addComida(colocarComida.queComida());
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
+                repaint();
             }else {
 
                 System.out.println("Lucha");
@@ -117,6 +126,7 @@ public class PanelHabitat extends JPanel {
                 comederoPrado.addComida(colocarComida.queComida());
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
+                repaint();
             }else {
 
                 System.out.println("Prado");
@@ -126,6 +136,7 @@ public class PanelHabitat extends JPanel {
                 comederoSetas.addComida(colocarComida.queComida());
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
+                repaint();
             }else {
 
                 System.out.println("Setas");
@@ -135,6 +146,7 @@ public class PanelHabitat extends JPanel {
                 comederoSiniestro.addComida(colocarComida.queComida());
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
+                repaint();
             }else {
 
                 System.out.println("Siniestro");
@@ -236,6 +248,7 @@ public class PanelHabitat extends JPanel {
         g.drawImage(comederoSiniestro.getImage(),1220,575,300,40,this);
 
         paintComidas(g);
+        HabitatAgua.paintComida(g);
     }
     public void paintComidas(Graphics g){
         HabitatAgua.paintComida(g);
