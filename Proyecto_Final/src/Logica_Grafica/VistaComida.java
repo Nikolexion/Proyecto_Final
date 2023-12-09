@@ -17,7 +17,7 @@ public class VistaComida implements ImageObserver {
                     g.drawImage(comidas.get(0).getImagen(),x,y, 30, 40, this);
                     break;
                 case 2:
-                    g.drawImage(comidas.get(0).getImagen(), 30, 40, this);
+                    g.drawImage(comidas.get(0).getImagen(),x,y,30,40, this);
                     g.drawImage(comidas.get(1).getImagen(),x + 37,y, 30, 40, this);
                     break;
                 case 3:

@@ -8,13 +8,15 @@ import java.awt.*;
 public class HabitatAgua extends JPanel{
     private Agua agua;
     private Zona zona, zonaComedero;
-    private Comedero comederoAgua;
+    private Comedero comedero;
     private int x,y,ancho,alto;
     private VistaComida vistaComida;
     public HabitatAgua() {
         agua = new Agua();
         vistaComida = new VistaComida();
-        comederoAgua = new Comedero();
+        comedero = new Comedero();
+        comedero.addComida(new Pinia());
+        comedero.addComida(new Pinia());
         ancho = 300;
         alto = 195;
         JButton boton = new JButton();
@@ -23,7 +25,7 @@ public class HabitatAgua extends JPanel{
         zona = new Zona(x,y,ancho,alto,boton);
         JButton botonComida = new JButton();
         zonaComedero = new Zona(x,y + 155,ancho,40,botonComida);
-        comederoAgua.setZona(zonaComedero);
+        comedero.setZona(zonaComedero);
 
     }
 
@@ -32,7 +34,7 @@ public class HabitatAgua extends JPanel{
     }
     public void paint(Graphics g){
         super.paint(g);
-        vistaComida.dibujarComidas(g,x + 5,y + 155,comederoAgua.getComedero());
+        vistaComida.dibujarComidas(g,x + 5,y + 155, comedero.getComedero());
 
     }
 
@@ -40,8 +42,8 @@ public class HabitatAgua extends JPanel{
         return zonaComedero;
     }
 
-    public Comedero getComederoAgua() {
-        return comederoAgua;
+    public Comedero getComedero() {
+        return comedero;
     }
 
     public Image getImagen() {

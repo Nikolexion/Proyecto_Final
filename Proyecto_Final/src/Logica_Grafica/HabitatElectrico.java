@@ -6,15 +6,19 @@ import Logica.Habitat.Electrico;
 import javax.swing.*;
 import java.awt.*;
 
-public class HabitatElectrico {
+public class HabitatElectrico extends JPanel{
     Electrico electrico;
     private Zona zona, zonaComedero;
-    private Comedero comederoElectrico;
+    private Comedero comedero;
     private int x,y,ancho,alto;
+    private VistaComida vistaComida;
 
     public HabitatElectrico() {
         electrico = new Electrico();
-        comederoElectrico = new Comedero();
+        vistaComida = new VistaComida();
+        comedero = new Comedero();
+        comedero.addComida(new Pinia());
+        comedero.addComida(new Pinia());
         JButton boton = new JButton();
         x = 580;
         y = 215;
@@ -23,19 +27,23 @@ public class HabitatElectrico {
         zona = new Zona(x,y,ancho,alto,boton);
         JButton botonComida = new JButton();
         zonaComedero = new Zona(x,y + 155,ancho,40,botonComida);
-        comederoElectrico.setZona(zonaComedero);
+        comedero.setZona(zonaComedero);
     }
 
     public Zona getZona() {
         return zona;
     }
+    public void paint(Graphics g){
+        super.paint(g);
+        vistaComida.dibujarComidas(g,x + 5,y + 155, comedero.getComedero());
 
+    }
     public Zona getZonaComedero() {
         return zonaComedero;
     }
 
-    public Comedero getComederoElectrico() {
-        return comederoElectrico;
+    public Comedero getComedero() {
+        return comedero;
     }
 
     public Image getImagen() {
