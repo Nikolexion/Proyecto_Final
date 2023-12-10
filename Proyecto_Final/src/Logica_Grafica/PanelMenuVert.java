@@ -31,6 +31,12 @@ public class PanelMenuVert extends JPanel implements EventListener {
         super.paint(g);
         menu = new ImageIcon("resources/MenuBackground.png").getImage();
 //        g.drawImage(menu,0,0,250,880,this);
+        g.setColor(Color.CYAN);
+        g.fillRect(5,0,230,30);
+        g.setColor(Color.BLACK);
+        g.drawString("Seleccione el pokemon que quiere añadir",10,17);
+
+
 
 
     }
