@@ -12,7 +12,7 @@ public class Bosque extends Habitat {
     private Comedero comedero;
 
     public Bosque(){
-        super(new ImageIcon("resources/Ambientes/Bosque.jpg").getImage());
+        super(new ImageIcon("resources/Ambientes/Bosque.jpg").getImage(), EnumComidas.LATANO);
         this.image = new ImageIcon("resources/Ambientes/Bosque.jpg").getImage();
         comedero = new Comedero();
     }
@@ -21,6 +21,10 @@ public class Bosque extends Habitat {
         return image;
     }
 
+    @Override
+    public boolean permiteComida(Comida comida){
+        return comida.getEnumComidas() == EnumComidas.LATANO;
+    }
     @Override
     public boolean permitePokemon(Pokemon pokemon) {
         return pokemon.getTipo() == Tipo.BOSQUE;
