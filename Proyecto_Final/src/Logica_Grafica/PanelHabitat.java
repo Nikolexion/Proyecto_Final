@@ -24,8 +24,6 @@ public class PanelHabitat extends JPanel {
     private HabitatSetas HabitatSetas;
     private HabitatSiniestro HabitatSiniestro;
     private Zona ZonaAgua, ZonaBosque, ZonaCielo, ZonaCueva, ZonaElectrico, ZonaHielo, ZonaHumedal, ZonaLava, ZonaLucha, ZonaPrado, ZonaSetas, ZonaSiniestro;
-    private Image ImagenAgua, ImagenBosque, ImagenCielo, ImagenCueva, ImagenElectrico, ImagenHielo, ImagenHumedal, ImagenLava, ImagenLucha,
-            ImagenPrado, ImagenSetas, ImagenSiniestro;
     private Comedero comederoAgua, comederoBosque, comederoCielo, comederoCueva, comederoElectrico, comederoHielo, comederoHumedal, comederoLava,
                 comederoLucha, comederoPrado, comederoSetas, comederoSiniestro;
     public ColocarComida colocarComida;
@@ -388,53 +386,6 @@ public class PanelHabitat extends JPanel {
     }
     public void paint(Graphics g){
         super.paint(g);
-        ImagenAgua = HabitatAgua.getImagen();
-        ImagenBosque = HabitatBosque.getImagen();
-        ImagenCielo = HabitatCielo.getImagen();
-        ImagenCueva = HabitatCueva.getImagen();
-        ImagenElectrico = HabitatElectrico.getImagen();
-        ImagenHielo = HabitatHielo.getImagen();
-        ImagenHumedal = HabitatHumedal.getImagen();
-        ImagenLava = HabitatLava.getImagen();
-        ImagenLucha = HabitatLucha.getImagen();
-        ImagenPrado = HabitatPrado.getImagen();
-        ImagenSetas = HabitatSetas.getImagen();
-        ImagenSiniestro = HabitatSiniestro.getImagen();
-
-        g.drawImage(ImagenAgua,260,10,300,195,this);
-        g.drawImage(ImagenBosque,260,215,300,195,this);
-        g.drawImage(ImagenCielo,260,420,300,195,this);
-
-        g.drawImage(ImagenCueva,580,10,300,195,this);
-        g.drawImage(ImagenElectrico,580,215,300,195,this);
-        g.drawImage(ImagenHielo,580,420,300,195,this);
-
-        g.drawImage(ImagenHumedal,900,10,300,195,this);
-        g.drawImage(ImagenLava,900,215,300,195,this);
-        g.drawImage(ImagenLucha,900,420,300,195,this);
-
-        g.drawImage(ImagenPrado,1220,10,300,195,this);
-        g.drawImage(ImagenSetas,1220,215,300,195,this);
-        g.drawImage(ImagenSiniestro,1220,420,300,195,this);
-
-
-
-        g.drawImage(comederoAgua.getImage(),260,165,300,40,this);
-        g.drawImage(comederoBosque.getImage(),260,370,300,40,this);
-        g.drawImage(comederoCielo.getImage(),260,575,300,40,this);
-
-        g.drawImage(comederoCueva.getImage(),580,165,300,40,this);
-        g.drawImage(comederoElectrico.getImage(),580,370,300,40,this);
-        g.drawImage(comederoHielo.getImage(),580,575,300,40,this);
-
-        g.drawImage(comederoHumedal.getImage(),900,165,300,40,this);
-        g.drawImage(comederoLava.getImage(),900,370,300,40,this);
-        g.drawImage(comederoLucha.getImage(),900,575,300,40,this);
-
-        g.drawImage(comederoPrado.getImage(),1220,165,300,40,this);
-        g.drawImage(comederoSetas.getImage(),1220,370,300,40,this);
-        g.drawImage(comederoSiniestro.getImage(),1220,575,300,40,this);
-
         HabitatAgua.paint(g);
         HabitatBosque.paint(g);
         HabitatCielo.paint(g);
