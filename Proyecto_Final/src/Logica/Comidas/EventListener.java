@@ -1,2 +1,5 @@
-package Logica.Comidas;public interface EventListener {
+package Logica.Comidas;
+
+public interface EventListener {
+    public void update();
 }
