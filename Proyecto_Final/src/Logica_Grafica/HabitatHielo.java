@@ -10,7 +10,8 @@ public class HabitatHielo extends JPanel{
     Hielo hielo;
     private Zona zona, zonaComedero;
     private Comedero comedero;
-    private int x,y,ancho,alto;
+    public int x,y;
+    private int ancho,alto;
     private VistaComida vistaComida;
 
     public HabitatHielo() {
@@ -36,6 +37,37 @@ public class HabitatHielo extends JPanel{
     public void paint(Graphics g){
         super.paint(g);
         vistaComida.dibujarComidas(g,x + 5,y + 155, comedero.getComedero());
+        switch (hielo.getSize()){
+            case 1:
+                g.drawImage(hielo.getPokemon(0).getImage(),(int)hielo.getPokemon(0).xpkmn,(int)hielo.getPokemon(0).ypkmn,60,60,this);
+                break;
+
+            case 2:
+                g.drawImage(hielo.getPokemon(0).getImage(),(int)hielo.getPokemon(0).xpkmn,(int)hielo.getPokemon(0).ypkmn,60,60,this);
+                g.drawImage(hielo.getPokemon(1).getImage(),(int)hielo.getPokemon(1).xpkmn,(int)hielo.getPokemon(1).ypkmn,60,60,this);
+                break;
+            case 3:
+                g.drawImage(hielo.getPokemon(0).getImage(),(int)hielo.getPokemon(0).xpkmn,(int)hielo.getPokemon(0).ypkmn,60,60,this);
+                g.drawImage(hielo.getPokemon(1).getImage(),(int)hielo.getPokemon(1).xpkmn,(int)hielo.getPokemon(1).ypkmn,60,60,this);
+                g.drawImage(hielo.getPokemon(2).getImage(),(int)hielo.getPokemon(2).xpkmn,(int)hielo.getPokemon(2).ypkmn,60,60,this);
+                break;
+            case 4:
+                g.drawImage(hielo.getPokemon(0).getImage(),(int)hielo.getPokemon(0).xpkmn,(int)hielo.getPokemon(0).ypkmn,60,60,this);
+                g.drawImage(hielo.getPokemon(1).getImage(),(int)hielo.getPokemon(1).xpkmn,(int)hielo.getPokemon(1).ypkmn,60,60,this);
+                g.drawImage(hielo.getPokemon(2).getImage(),(int)hielo.getPokemon(2).xpkmn,(int)hielo.getPokemon(2).ypkmn,60,60,this);
+                g.drawImage(hielo.getPokemon(3).getImage(),(int)hielo.getPokemon(3).xpkmn,(int)hielo.getPokemon(3).ypkmn,60,60,this);
+                break;
+            case 5:
+                g.drawImage(hielo.getPokemon(0).getImage(),(int)hielo.getPokemon(0).xpkmn,(int)hielo.getPokemon(0).ypkmn,60,60,this);
+                g.drawImage(hielo.getPokemon(1).getImage(),(int)hielo.getPokemon(1).xpkmn,(int)hielo.getPokemon(1).ypkmn,60,60,this);
+                g.drawImage(hielo.getPokemon(2).getImage(),(int)hielo.getPokemon(2).xpkmn,(int)hielo.getPokemon(2).ypkmn,60,60,this);
+                g.drawImage(hielo.getPokemon(3).getImage(),(int)hielo.getPokemon(3).xpkmn,(int)hielo.getPokemon(3).ypkmn,60,60,this);
+                g.drawImage(hielo.getPokemon(4).getImage(),(int)hielo.getPokemon(4).xpkmn,(int)hielo.getPokemon(4).ypkmn,60,60,this);
+                break;
+
+            default:
+                break;
+        }
 
     }
     public Zona getZonaComedero() {
@@ -47,5 +79,10 @@ public class HabitatHielo extends JPanel{
     }
     public Image getImagen() {
         return hielo.getImage();
+    }
+    public void update(){
+        for (int i = 0; i < hielo.getSize(); i++){
+            hielo.getPokemon(i).refrescarEstado();
+        }
     }
 }

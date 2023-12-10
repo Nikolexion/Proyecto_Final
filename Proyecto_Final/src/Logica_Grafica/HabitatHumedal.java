@@ -10,7 +10,8 @@ public class HabitatHumedal extends JPanel{
     Humedal humedal;
     private Zona zona, zonaComedero;
     private Comedero comedero;
-    private int x,y,ancho,alto;
+    public int x,y;
+    private int ancho,alto;
     private VistaComida vistaComida;
 
     public HabitatHumedal() {
@@ -36,6 +37,37 @@ public class HabitatHumedal extends JPanel{
     public void paint(Graphics g){
         super.paint(g);
         vistaComida.dibujarComidas(g,x + 5,y + 155, comedero.getComedero());
+        switch (humedal.getSize()){
+            case 1:
+                g.drawImage(humedal.getPokemon(0).getImage(),(int)humedal.getPokemon(0).xpkmn,(int)humedal.getPokemon(0).ypkmn,60,60,this);
+                break;
+
+            case 2:
+                g.drawImage(humedal.getPokemon(0).getImage(),(int)humedal.getPokemon(0).xpkmn,(int)humedal.getPokemon(0).ypkmn,60,60,this);
+                g.drawImage(humedal.getPokemon(1).getImage(),(int)humedal.getPokemon(1).xpkmn,(int)humedal.getPokemon(1).ypkmn,60,60,this);
+                break;
+            case 3:
+                g.drawImage(humedal.getPokemon(0).getImage(),(int)humedal.getPokemon(0).xpkmn,(int)humedal.getPokemon(0).ypkmn,60,60,this);
+                g.drawImage(humedal.getPokemon(1).getImage(),(int)humedal.getPokemon(1).xpkmn,(int)humedal.getPokemon(1).ypkmn,60,60,this);
+                g.drawImage(humedal.getPokemon(2).getImage(),(int)humedal.getPokemon(2).xpkmn,(int)humedal.getPokemon(2).ypkmn,60,60,this);
+                break;
+            case 4:
+                g.drawImage(humedal.getPokemon(0).getImage(),(int)humedal.getPokemon(0).xpkmn,(int)humedal.getPokemon(0).ypkmn,60,60,this);
+                g.drawImage(humedal.getPokemon(1).getImage(),(int)humedal.getPokemon(1).xpkmn,(int)humedal.getPokemon(1).ypkmn,60,60,this);
+                g.drawImage(humedal.getPokemon(2).getImage(),(int)humedal.getPokemon(2).xpkmn,(int)humedal.getPokemon(2).ypkmn,60,60,this);
+                g.drawImage(humedal.getPokemon(3).getImage(),(int)humedal.getPokemon(3).xpkmn,(int)humedal.getPokemon(3).ypkmn,60,60,this);
+                break;
+            case 5:
+                g.drawImage(humedal.getPokemon(0).getImage(),(int)humedal.getPokemon(0).xpkmn,(int)humedal.getPokemon(0).ypkmn,60,60,this);
+                g.drawImage(humedal.getPokemon(1).getImage(),(int)humedal.getPokemon(1).xpkmn,(int)humedal.getPokemon(1).ypkmn,60,60,this);
+                g.drawImage(humedal.getPokemon(2).getImage(),(int)humedal.getPokemon(2).xpkmn,(int)humedal.getPokemon(2).ypkmn,60,60,this);
+                g.drawImage(humedal.getPokemon(3).getImage(),(int)humedal.getPokemon(3).xpkmn,(int)humedal.getPokemon(3).ypkmn,60,60,this);
+                g.drawImage(humedal.getPokemon(4).getImage(),(int)humedal.getPokemon(4).xpkmn,(int)humedal.getPokemon(4).ypkmn,60,60,this);
+                break;
+
+            default:
+                break;
+        }
 
     }
     public Zona getZonaComedero() {
@@ -47,5 +79,10 @@ public class HabitatHumedal extends JPanel{
     }
     public Image getImagen() {
         return humedal.getImage();
+    }
+    public void update(){
+        for (int i = 0; i < humedal.getSize(); i++){
+            humedal.getPokemon(i).refrescarEstado();
+        }
     }
 }

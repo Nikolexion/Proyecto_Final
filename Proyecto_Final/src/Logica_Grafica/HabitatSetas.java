@@ -10,7 +10,8 @@ public class HabitatSetas extends JPanel{
     Setas setas;
     private Zona zona, zonaComedero;
     private Comedero comedero;
-    private int x,y,ancho,alto;
+    public int x,y;
+    private int ancho,alto;
     private VistaComida vistaComida;
 
     public HabitatSetas() {
@@ -36,6 +37,37 @@ public class HabitatSetas extends JPanel{
     public void paint(Graphics g){
         super.paint(g);
         vistaComida.dibujarComidas(g,x + 5,y + 155, comedero.getComedero());
+        switch (setas.getSize()){
+            case 1:
+                g.drawImage(setas.getPokemon(0).getImage(),(int)setas.getPokemon(0).xpkmn,(int)setas.getPokemon(0).ypkmn,60,60,this);
+                break;
+
+            case 2:
+                g.drawImage(setas.getPokemon(0).getImage(),(int)setas.getPokemon(0).xpkmn,(int)setas.getPokemon(0).ypkmn,60,60,this);
+                g.drawImage(setas.getPokemon(1).getImage(),(int)setas.getPokemon(1).xpkmn,(int)setas.getPokemon(1).ypkmn,60,60,this);
+                break;
+            case 3:
+                g.drawImage(setas.getPokemon(0).getImage(),(int)setas.getPokemon(0).xpkmn,(int)setas.getPokemon(0).ypkmn,60,60,this);
+                g.drawImage(setas.getPokemon(1).getImage(),(int)setas.getPokemon(1).xpkmn,(int)setas.getPokemon(1).ypkmn,60,60,this);
+                g.drawImage(setas.getPokemon(2).getImage(),(int)setas.getPokemon(2).xpkmn,(int)setas.getPokemon(2).ypkmn,60,60,this);
+                break;
+            case 4:
+                g.drawImage(setas.getPokemon(0).getImage(),(int)setas.getPokemon(0).xpkmn,(int)setas.getPokemon(0).ypkmn,60,60,this);
+                g.drawImage(setas.getPokemon(1).getImage(),(int)setas.getPokemon(1).xpkmn,(int)setas.getPokemon(1).ypkmn,60,60,this);
+                g.drawImage(setas.getPokemon(2).getImage(),(int)setas.getPokemon(2).xpkmn,(int)setas.getPokemon(2).ypkmn,60,60,this);
+                g.drawImage(setas.getPokemon(3).getImage(),(int)setas.getPokemon(3).xpkmn,(int)setas.getPokemon(3).ypkmn,60,60,this);
+                break;
+            case 5:
+                g.drawImage(setas.getPokemon(0).getImage(),(int)setas.getPokemon(0).xpkmn,(int)setas.getPokemon(0).ypkmn,60,60,this);
+                g.drawImage(setas.getPokemon(1).getImage(),(int)setas.getPokemon(1).xpkmn,(int)setas.getPokemon(1).ypkmn,60,60,this);
+                g.drawImage(setas.getPokemon(2).getImage(),(int)setas.getPokemon(2).xpkmn,(int)setas.getPokemon(2).ypkmn,60,60,this);
+                g.drawImage(setas.getPokemon(3).getImage(),(int)setas.getPokemon(3).xpkmn,(int)setas.getPokemon(3).ypkmn,60,60,this);
+                g.drawImage(setas.getPokemon(4).getImage(),(int)setas.getPokemon(4).xpkmn,(int)setas.getPokemon(4).ypkmn,60,60,this);
+                break;
+
+            default:
+                break;
+        }
 
     }
     public Zona getZonaComedero() {
@@ -47,5 +79,10 @@ public class HabitatSetas extends JPanel{
     }
     public Image getImagen() {
         return setas.getImage();
+    }
+    public void update(){
+        for (int i = 0; i < setas.getSize(); i++){
+            setas.getPokemon(i).refrescarEstado();
+        }
     }
 }

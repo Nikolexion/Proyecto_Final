@@ -58,6 +58,11 @@ public class PanelPrincipal extends JPanel {
             }
         });
 
+        while (true){
+            if (System.currentTimeMillis()%1000 == 0){
+                panelHabitat.update();
+            }
+        }
 
     }
     @Override

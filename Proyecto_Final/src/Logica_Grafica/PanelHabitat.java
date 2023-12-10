@@ -44,6 +44,10 @@ public class PanelHabitat extends JPanel {
                 panelMenuVert.update();
             }else {
                 HabitatAgua.agua.addPokemon(panelMenuVert.pkmn1);
+                panelMenuVert.pkmn1 = null;
+                for (int i = 0; i < HabitatAgua.agua.getSize(); i++){
+                    HabitatAgua.agua.getPokemon(i).setCoords(HabitatAgua.x, HabitatAgua.y);
+                }
                 System.out.println("Agua");
                 repaint();
             }
@@ -57,6 +61,9 @@ public class PanelHabitat extends JPanel {
                 panelMenuVert.update();
             }else {
                 HabitatBosque.bosque.addPokemon(panelMenuVert.pkmn1);
+                for (int i = 0; i < HabitatBosque.bosque.getSize(); i++){
+                    HabitatBosque.bosque.getPokemon(i).setCoords(HabitatBosque.x, HabitatBosque.y);
+                }
                 panelMenuVert.pkmn1 = null;
                 System.out.println("Bosque");
             }
@@ -69,6 +76,9 @@ public class PanelHabitat extends JPanel {
                 panelMenuVert.update();
             }else {
                 HabitatCielo.cielo.addPokemon(panelMenuVert.pkmn1);
+                for (int i = 0; i < HabitatCielo.cielo.getSize(); i++){
+                    HabitatCielo.cielo.getPokemon(i).setCoords(HabitatCielo.x, HabitatCielo.y);
+                }
                 panelMenuVert.pkmn1 = null;
                 System.out.println("Cielo");
             }
@@ -81,6 +91,9 @@ public class PanelHabitat extends JPanel {
                 panelMenuVert.update();
             }else {
                 HabitatCueva.cueva.addPokemon(panelMenuVert.pkmn1);
+                for (int i = 0; i < HabitatCueva.cueva.getSize(); i++){
+                    HabitatCueva.cueva.getPokemon(i).setCoords(HabitatCueva.x, HabitatCueva.y);
+                }
                 panelMenuVert.pkmn1 = null;
                 System.out.println("Cueva");
             }
@@ -93,6 +106,9 @@ public class PanelHabitat extends JPanel {
                 panelMenuVert.update();
             }else {
                 HabitatElectrico.electrico.addPokemon(panelMenuVert.pkmn1);
+                for (int i = 0; i < HabitatElectrico.electrico.getSize(); i++){
+                    HabitatElectrico.electrico.getPokemon(i).setCoords(HabitatElectrico.x, HabitatElectrico.y);
+                }
                 panelMenuVert.pkmn1 = null;
                 System.out.println("Electrico");
             }
@@ -105,6 +121,9 @@ public class PanelHabitat extends JPanel {
                 panelMenuVert.update();
             }else {
                 HabitatHielo.hielo.addPokemon(panelMenuVert.pkmn1);
+                for (int i = 0; i < HabitatHielo.hielo.getSize(); i++){
+                    HabitatHielo.hielo.getPokemon(i).setCoords(HabitatHielo.x, HabitatHielo.y);
+                }
                 panelMenuVert.pkmn1 = null;
                 System.out.println("Hielo");
             }
@@ -117,6 +136,9 @@ public class PanelHabitat extends JPanel {
                 panelMenuVert.update();
             }else {
                 HabitatHumedal.humedal.addPokemon(panelMenuVert.pkmn1);
+                for (int i = 0; i < HabitatHumedal.humedal.getSize(); i++){
+                    HabitatHumedal.humedal.getPokemon(i).setCoords(HabitatHumedal.x, HabitatHumedal.y);
+                }
                 panelMenuVert.pkmn1 = null;
                 System.out.println("Humedal");
             }
@@ -128,6 +150,9 @@ public class PanelHabitat extends JPanel {
                 panelMenuVert.update();
             }else {
                 HabitatLava.lava.addPokemon(panelMenuVert.pkmn1);
+                for (int i = 0; i < HabitatLava.lava.getSize(); i++){
+                    HabitatLava.lava.getPokemon(i).setCoords(HabitatLava.x, HabitatLava.y);
+                }
                 panelMenuVert.pkmn1 = null;
                 System.out.println("Lava");
             }
@@ -140,6 +165,9 @@ public class PanelHabitat extends JPanel {
                 panelMenuVert.update();
             }else {
                 HabitatLucha.lucha.addPokemon(panelMenuVert.pkmn1);
+                for (int i = 0; i < HabitatLucha.lucha.getSize(); i++){
+                    HabitatLucha.lucha.getPokemon(i).setCoords(HabitatLucha.x, HabitatLucha.y);
+                }
                 panelMenuVert.pkmn1 = null;
                 System.out.println("Lucha");
             }
@@ -152,6 +180,9 @@ public class PanelHabitat extends JPanel {
                 panelMenuVert.update();
             }else {
                 HabitatPrado.prado.addPokemon(panelMenuVert.pkmn1);
+                for (int i = 0; i < HabitatPrado.prado.getSize(); i++){
+                    HabitatPrado.prado.getPokemon(i).setCoords(HabitatPrado.x, HabitatPrado.y);
+                }
                 panelMenuVert.pkmn1 = null;
                 System.out.println("Prado");
             }
@@ -164,6 +195,9 @@ public class PanelHabitat extends JPanel {
                 panelMenuVert.update();
             }else {
                 HabitatSetas.setas.addPokemon(panelMenuVert.pkmn1);
+                for (int i = 0; i < HabitatSetas.setas.getSize(); i++){
+                    HabitatSetas.setas.getPokemon(i).setCoords(HabitatSetas.x, HabitatSetas.y);
+                }
                 panelMenuVert.pkmn1 = null;
                 System.out.println("Setas");
             }
@@ -176,6 +210,9 @@ public class PanelHabitat extends JPanel {
                 panelMenuVert.update();
             }else {
                 HabitatSiniestro.siniestro.addPokemon(panelMenuVert.pkmn1);
+                for (int i = 0; i < HabitatSiniestro.siniestro.getSize(); i++){
+                    HabitatSiniestro.siniestro.getPokemon(i).setCoords(HabitatSiniestro.x, HabitatSiniestro.y);
+                }
                 panelMenuVert.pkmn1 = null;
                 System.out.println("Siniestro");
             }
@@ -289,5 +326,19 @@ public class PanelHabitat extends JPanel {
         HabitatSetas.paint(g);
         HabitatSiniestro.paint(g);
         repaint();
+    }
+    public void update(){
+        HabitatAgua.update();
+        HabitatBosque.update();
+        HabitatCielo.update();
+        HabitatCueva.update();
+        HabitatElectrico.update();
+        HabitatHielo.update();
+        HabitatHumedal.update();
+        HabitatLava.update();
+        HabitatLucha.update();
+        HabitatPrado.update();
+        HabitatSetas.update();
+        HabitatSiniestro.update();
     }
 }

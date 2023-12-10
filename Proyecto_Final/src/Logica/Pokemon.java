@@ -5,6 +5,7 @@ import Logica.State.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -19,7 +20,7 @@ public class Pokemon {
     private long tiempoInicialMs, tiempoActualMs;
     private long tiempoInicialEstadoNormal, tiempoActualEstadoNormal;
     private long tiempoInicialEstadoHambriento, tiempoActualEstadoHambriento;
-    private int x, y;
+    public float x, y, xpkmn, ypkmn;
 
     public Pokemon (DetallePokemon pokemon){
         this.nombre = pokemon.getNombre();
@@ -31,7 +32,7 @@ public class Pokemon {
         tiempoActualMs = tiempoInicialMs;
     }
 
-    private void refrescarEstado() {
+    public void refrescarEstado() {
         estadoActual.actuar();
         tiempoActualMs = System.currentTimeMillis();
     }
@@ -87,5 +88,8 @@ public class Pokemon {
     public void setCoords(int x, int y){
         this.x = x;
         this.y = y;
+        Random random = new Random();
+        xpkmn = x +random.nextInt(210);
+        ypkmn = y + random.nextInt(110);
     }
 }
