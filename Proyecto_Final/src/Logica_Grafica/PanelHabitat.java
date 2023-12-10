@@ -45,6 +45,7 @@ public class PanelHabitat extends JPanel {
                     repaint();
                     panelMenuVert.update();
                 } else {
+                    errorComida();
                     colocarComida.setDesativado();
                     panelMenuVert.update();
                 }
@@ -67,6 +68,7 @@ public class PanelHabitat extends JPanel {
                     repaint();
                     panelMenuVert.update();
                 } else {
+                    errorComida();
                     colocarComida.setDesativado();
                     panelMenuVert.update();
                 }
@@ -87,6 +89,7 @@ public class PanelHabitat extends JPanel {
                     repaint();
                     panelMenuVert.update();
                 } else {
+                    errorComida();
                     colocarComida.setDesativado();
                     panelMenuVert.update();
                 }
@@ -107,6 +110,7 @@ public class PanelHabitat extends JPanel {
                     repaint();
                     panelMenuVert.update();
                 } else {
+                    errorComida();
                     colocarComida.setDesativado();
                     panelMenuVert.update();
                 }
@@ -127,6 +131,7 @@ public class PanelHabitat extends JPanel {
                     repaint();
                     panelMenuVert.update();
                 } else {
+                    errorComida();
                     colocarComida.setDesativado();
                     panelMenuVert.update();
                 }
@@ -147,6 +152,7 @@ public class PanelHabitat extends JPanel {
                     repaint();
                     panelMenuVert.update();
                 } else {
+                    errorComida();
                     colocarComida.setDesativado();
                     panelMenuVert.update();
                 }
@@ -167,6 +173,7 @@ public class PanelHabitat extends JPanel {
                     repaint();
                     panelMenuVert.update();
                 } else {
+                    errorComida();
                     colocarComida.setDesativado();
                     panelMenuVert.update();
                 }
@@ -187,6 +194,7 @@ public class PanelHabitat extends JPanel {
                     repaint();
                     panelMenuVert.update();
                 } else {
+                    errorComida();
                     colocarComida.setDesativado();
                     panelMenuVert.update();
                 }
@@ -207,6 +215,7 @@ public class PanelHabitat extends JPanel {
                     repaint();
                     panelMenuVert.update();
                 } else {
+                    errorComida();
                     colocarComida.setDesativado();
                     panelMenuVert.update();
                 }
@@ -227,6 +236,7 @@ public class PanelHabitat extends JPanel {
                     repaint();
                     panelMenuVert.update();
                 } else {
+                    errorComida();
                     colocarComida.setDesativado();
                     panelMenuVert.update();
                 }
@@ -247,6 +257,7 @@ public class PanelHabitat extends JPanel {
                     repaint();
                     panelMenuVert.update();
                 } else {
+                    errorComida();
                     colocarComida.setDesativado();
                     panelMenuVert.update();
                 }
@@ -267,6 +278,7 @@ public class PanelHabitat extends JPanel {
                     repaint();
                     panelMenuVert.update();
                 } else {
+                    errorComida();
                     colocarComida.setDesativado();
                     panelMenuVert.update();
                 }
@@ -402,5 +414,8 @@ public class PanelHabitat extends JPanel {
         HabitatPrado.update();
         HabitatSetas.update();
         HabitatSiniestro.update();
+    }
+    public void errorComida(){
+        JOptionPane.showMessageDialog(PanelHabitat.this,"Este habitat no acepta esta comida","Advertencia",2);
     }
 }
