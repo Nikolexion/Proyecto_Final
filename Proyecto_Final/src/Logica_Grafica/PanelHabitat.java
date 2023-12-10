@@ -1,6 +1,7 @@
 package Logica_Grafica;
 
 import Logica.Comidas.Comedero;
+import Logica.Excepciones.HabitatNoPermitePokemon;
 import Logica.ManejoDeColocacion.ColocarComida;
 
 import javax.swing.*;
@@ -33,7 +34,7 @@ public class PanelHabitat extends JPanel {
         IniciarHabitats();
         IniciarZonas();
     }
-    public void clicked(MouseEvent e){
+    public void clicked(MouseEvent e) throws HabitatNoPermitePokemon {
         if (ZonaAgua.contienePunto(e.getX(),e.getY())){
             if (colocarComida.estado()){
                 comederoAgua.addComida(colocarComida.queComida());
@@ -42,7 +43,11 @@ public class PanelHabitat extends JPanel {
                 repaint();
                 panelMenuVert.update();
             }else {
+
+                    HabitatAgua.agua.addPokemon(panelMenuVert.pkmn1);
+
                 System.out.println("Agua");
+                repaint();
             }
 
         } else if (ZonaBosque.contienePunto(e.getX(),e.getY())) {
@@ -274,5 +279,6 @@ public class PanelHabitat extends JPanel {
         HabitatPrado.paint(g);
         HabitatSetas.paint(g);
         HabitatSiniestro.paint(g);
+        repaint();
     }
 }

@@ -1,8 +1,10 @@
 package Logica_Grafica;
 
 import Logica.Comidas.*;
+import Logica.DetallePokemon;
 import Logica.Inventario;
 import Logica.ManejoDeColocacion.ColocarComida;
+import Logica.Pokemon;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,6 +19,7 @@ public class PanelMenuVert extends JPanel implements EventListener {
     ColocarComida colocarComida;
     Inventario inventario;
     ImageIcon imagenLatano,imagenPinia,imagenFrambu,imagenPokocho;
+    Pokemon pkmn1, pkmn2, pkmn3, pkmn4, pkmn5;
     private Image menu;
     private  PanelMenuVert() {
         this.iniciarListas();
@@ -258,9 +261,50 @@ public class PanelMenuVert extends JPanel implements EventListener {
     private void clickListas(ActionEvent e, int nroLista){
         switch (nroLista){
             case 0:
-
-
+                switch (listaAgua.getSelectedIndex()){
+                    case 0:
+                        System.out.println(listaAgua.getSelectedIndex());
+                        pkmn1 = new Pokemon(DetallePokemon.SQUIRTLE);
+                        break;
+                    case 1:
+                        pkmn1 = new Pokemon(DetallePokemon.WARTORTLE);
+                        break;
+                    case 2:
+                        pkmn1 = new Pokemon(DetallePokemon.BLASTOISE);
+                        break;
+                    case 3:
+                        pkmn1 = new Pokemon(DetallePokemon.MAGIKARP);
+                        break;
+                    case 4:
+                        pkmn1 = new Pokemon(DetallePokemon.GYARADOS);
+                        break;
+                    case 5:
+                        pkmn1 = new Pokemon(DetallePokemon.LAPRAS);
+                        break;
+                    case 6:
+                        pkmn1 = new Pokemon(DetallePokemon.OMANYTE);
+                        break;
+                    case 7:
+                        pkmn1 = new Pokemon(DetallePokemon.OMASTAR);
+                        break;
+                    case 8:
+                        pkmn1 = new Pokemon(DetallePokemon.TOTODILE);
+                        break;
+                    case 9:
+                        pkmn1 = new Pokemon(DetallePokemon.CROCONAW);
+                        break;
+                    case 10:
+                        pkmn1 = new Pokemon(DetallePokemon.FERALIGATR);
+                        break;
+                    case 11:
+                        pkmn1 = new Pokemon(DetallePokemon.SUICUNE);
+                        break;
+                    case 12:
+                        pkmn1 = new Pokemon(DetallePokemon.KYOGRE);
+                        break;
+                }
                 break;
+
             case 1:
 
                 break;

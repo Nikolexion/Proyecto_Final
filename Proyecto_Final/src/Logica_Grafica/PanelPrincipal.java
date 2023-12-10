@@ -1,5 +1,6 @@
 package Logica_Grafica;
 
+import Logica.Excepciones.HabitatNoPermitePokemon;
 import Logica.ManejoDeColocacion.ColocarComida;
 
 import javax.swing.*;
@@ -48,7 +49,11 @@ public class PanelPrincipal extends JPanel {
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                panelHabitat.clicked(e);
+                try {
+                    panelHabitat.clicked(e);
+                } catch (HabitatNoPermitePokemon ex) {
+                    throw new RuntimeException(ex);
+                }
                 repaint();
             }
         });
