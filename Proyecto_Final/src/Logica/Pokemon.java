@@ -19,6 +19,7 @@ public class Pokemon {
     private long tiempoInicialMs, tiempoActualMs;
     private long tiempoInicialEstadoNormal, tiempoActualEstadoNormal;
     private long tiempoInicialEstadoHambriento, tiempoActualEstadoHambriento;
+    private int x, y;
 
     public Pokemon (DetallePokemon pokemon){
         this.nombre = pokemon.getNombre();
@@ -82,5 +83,9 @@ public class Pokemon {
     public void iniciaEstadoHambriento(){
         tiempoInicialEstadoHambriento = System.currentTimeMillis();
         tiempoActualEstadoHambriento = tiempoInicialEstadoHambriento;
+    }
+    public void setCoords(int x, int y){
+        this.x = x;
+        this.y = y;
     }
 }
