@@ -16,7 +16,7 @@ public class PanelPrincipal extends JPanel {
     public PanelPrincipal() {
         colocarComida = ColocarComida.getInstance();
         panelHabitat = new PanelHabitat();
-        panelMenuVert = new PanelMenuVert();
+        panelMenuVert = PanelMenuVert.getInstance();
         panelMenuHorz = new PanelMenuHorz();
         this.setSize(1800,880);
         JFrame frame = new JFrame();
@@ -49,6 +49,7 @@ public class PanelPrincipal extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 panelHabitat.clicked(e);
+                repaint();
             }
         });
 

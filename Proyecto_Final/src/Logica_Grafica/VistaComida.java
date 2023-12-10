@@ -1,17 +1,24 @@
 package Logica_Grafica;
 
 import Logica.Comidas.Comida;
+import Logica.Comidas.EventListener;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.image.ImageObserver;
 import java.util.ArrayList;
 
-public class VistaComida implements ImageObserver {
+public class VistaComida implements ImageObserver, EventListener {
+    private Graphics g;
+    private int x, y;
+    private ArrayList<Comida> comidas;
     public VistaComida() {
     }
 
     public void dibujarComidas(Graphics g, int x, int y, ArrayList<Comida> comidas) {
+        this.g = g;
+        this.x = x;
+        this.y = y;
+        this.comidas = comidas;
             switch (comidas.size()){
                 case 1:
                     g.drawImage(comidas.get(0).getImagen(),x,y, 30, 40, this);
@@ -74,5 +81,10 @@ public class VistaComida implements ImageObserver {
     @Override
     public boolean imageUpdate(Image img, int infoflags, int x, int y, int width, int height) {
         return false;
+    }
+
+    @Override
+    public void update() {
+        this.dibujarComidas(g,x,y,comidas);
     }
 }

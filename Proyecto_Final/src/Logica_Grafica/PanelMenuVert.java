@@ -1,25 +1,24 @@
 package Logica_Grafica;
 
-import Logica.Comidas.Frambu;
-import Logica.Comidas.Latano;
-import Logica.Comidas.Pinia;
+import Logica.Comidas.*;
 import Logica.Inventario;
 import Logica.ManejoDeColocacion.ColocarComida;
-import Logica.Comidas.Pokocho;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class PanelMenuVert extends JPanel {
+public class PanelMenuVert extends JPanel implements EventListener {
+    private static PanelMenuVert panelMenuVert;
     JComboBox<String> listaAgua,listaBosque,listaCielo,listaCueva,listaElectrico,listaHielo,listaHumedal,listaLava,listaLucha,listaPrado,
                         listaSetas,listaSiniestro;
     JToggleButton comprarPokocho, comprarFrambu, comprarPinia, comprarLatano;
     ColocarComida colocarComida;
     Inventario inventario;
+    ImageIcon imagenLatano,imagenPinia,imagenFrambu,imagenPokocho;
     private Image menu;
-    public PanelMenuVert() {
+    private  PanelMenuVert() {
         this.iniciarListas();
         this.iniciarComidas();
         inventario = new Inventario();
@@ -153,7 +152,7 @@ public class PanelMenuVert extends JPanel {
     public void iniciarComidas(){
         comprarPokocho = new JToggleButton();
         comprarPokocho.setBounds(25, 515,98,123);
-        ImageIcon imagenPokocho= new ImageIcon("resources/Pokocho.png");
+        imagenPokocho = new ImageIcon("resources/Pokocho.png");
         imagenPokocho = new ImageIcon(imagenPokocho.getImage().getScaledInstance(comprarPokocho.getWidth(),comprarPokocho.getHeight(),Image.SCALE_SMOOTH));
         ImageIcon imagenPokochoOFF= new ImageIcon("resources/PokochoOFF.png");
         imagenPokochoOFF = new ImageIcon(imagenPokochoOFF.getImage().getScaledInstance(comprarPokocho.getWidth(),comprarPokocho.getHeight(),Image.SCALE_SMOOTH));
@@ -172,13 +171,14 @@ public class PanelMenuVert extends JPanel {
                     comprarPokocho.setIcon(finalImagenPokochoOFF);
                 } else {
                     comprarPokocho.setIcon(finalImagenPokocho);
+                    colocarComida.setDesativado();
                 }
             }
         });
 
         comprarFrambu = new JToggleButton();
         comprarFrambu.setBounds(150,515,98,123);
-        ImageIcon imagenFrambu = new ImageIcon("resources/Baya_Frambu.png");
+        imagenFrambu = new ImageIcon("resources/Baya_Frambu.png");
         imagenFrambu = new ImageIcon(imagenFrambu.getImage().getScaledInstance(comprarFrambu.getWidth(),comprarFrambu.getHeight(),Image.SCALE_SMOOTH));
         ImageIcon imagenFrambuOFF = new ImageIcon("resources/Baya_FrambuOFF.png");
         imagenFrambuOFF = new ImageIcon(imagenFrambuOFF.getImage().getScaledInstance(comprarFrambu.getWidth(),comprarFrambu.getHeight(),Image.SCALE_SMOOTH));
@@ -197,13 +197,14 @@ public class PanelMenuVert extends JPanel {
                     comprarFrambu.setIcon(finalimagenFrambuOFF);
                 } else {
                     comprarFrambu.setIcon(finalimagenFrambu);
+                    colocarComida.setDesativado();
                 }
             }
         });
 
         comprarPinia = new JToggleButton();
         comprarPinia.setBounds(25,655,98,123);
-        ImageIcon imagenPinia = new ImageIcon("resources/Baya_Pinia.png");
+        imagenPinia = new ImageIcon("resources/Baya_Pinia.png");
         imagenPinia = new ImageIcon(imagenPinia.getImage().getScaledInstance(comprarPinia.getWidth(),comprarPinia.getHeight(),Image.SCALE_SMOOTH));
         ImageIcon imagenPiniaOFF = new ImageIcon("resources/Baya_PiniaOFF.png");
         imagenPiniaOFF = new ImageIcon(imagenPiniaOFF.getImage().getScaledInstance(comprarPinia.getWidth(),comprarPinia.getHeight(),Image.SCALE_SMOOTH));
@@ -222,6 +223,7 @@ public class PanelMenuVert extends JPanel {
                     comprarPinia.setIcon(finalimagenPiniaOFF);
                 } else {
                     comprarPinia.setIcon(finalimagenPinia);
+                    colocarComida.setDesativado();
                 }
 
             }
@@ -229,7 +231,7 @@ public class PanelMenuVert extends JPanel {
 
         comprarLatano = new JToggleButton();
         comprarLatano.setBounds(150,655,98,123);
-        ImageIcon imagenLatano = new ImageIcon("resources/Baya_Latano.png");
+        imagenLatano = new ImageIcon("resources/Baya_Latano.png");
         imagenLatano = new ImageIcon(imagenLatano.getImage().getScaledInstance(comprarLatano.getWidth(),comprarLatano.getHeight(),Image.SCALE_SMOOTH));
         ImageIcon imagenLatanoOFF = new ImageIcon("resources/Baya_LatanoOFF.png");
         imagenLatanoOFF = new ImageIcon(imagenLatanoOFF.getImage().getScaledInstance(comprarLatano.getWidth(),comprarLatano.getHeight(),Image.SCALE_SMOOTH));
@@ -248,6 +250,7 @@ public class PanelMenuVert extends JPanel {
                     comprarLatano.setIcon(finalimagenLatanoOFF);
                 } else {
                     comprarLatano.setIcon(finalimagenLatano);
+                    colocarComida.setDesativado();
                 }
             }
         });
@@ -292,5 +295,26 @@ public class PanelMenuVert extends JPanel {
 
                 break;
         }
+    }
+
+    @Override
+    public void update() {
+        comprarPokocho.setSelected(false);
+        comprarPokocho.setIcon(imagenPokocho);
+
+        comprarFrambu.setSelected(false);
+        comprarFrambu.setIcon(imagenFrambu);
+
+        comprarPinia.setSelected(false);
+        comprarPinia.setIcon(imagenPinia);
+
+        comprarLatano.setSelected(false);
+        comprarLatano.setIcon(imagenLatano);
+    }
+    public static PanelMenuVert getInstance(){
+        if (panelMenuVert == null){
+            panelMenuVert = new PanelMenuVert();
+        }
+        return panelMenuVert;
     }
 }

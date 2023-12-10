@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 
 public class PanelHabitat extends JPanel {
+    PanelMenuVert panelMenuVert;
     private HabitatAgua HabitatAgua;
     private HabitatBosque HabitatBosque;
     private HabitatCielo HabitatCielo;
@@ -27,6 +28,7 @@ public class PanelHabitat extends JPanel {
                 comederoLucha, comederoPrado, comederoSetas, comederoSiniestro;
     public ColocarComida colocarComida;
     public PanelHabitat() {
+        panelMenuVert = PanelMenuVert.getInstance();
         colocarComida = ColocarComida.getInstance();
         IniciarHabitats();
         IniciarZonas();
@@ -38,6 +40,7 @@ public class PanelHabitat extends JPanel {
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
                 repaint();
+                panelMenuVert.update();
             }else {
                 System.out.println("Agua");
             }
@@ -48,6 +51,7 @@ public class PanelHabitat extends JPanel {
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
                 repaint();
+                panelMenuVert.update();
             }else {
 
                 System.out.println("Bosque");
@@ -58,6 +62,7 @@ public class PanelHabitat extends JPanel {
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
                 repaint();
+                panelMenuVert.update();
             }else {
 
                 System.out.println("Cielo");
@@ -68,6 +73,7 @@ public class PanelHabitat extends JPanel {
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
                 repaint();
+                panelMenuVert.update();
             }else {
 
                 System.out.println("Cueva");
@@ -78,6 +84,7 @@ public class PanelHabitat extends JPanel {
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
                 repaint();
+                panelMenuVert.update();
             }else {
 
                 System.out.println("Electrico");
@@ -88,6 +95,7 @@ public class PanelHabitat extends JPanel {
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
                 repaint();
+                panelMenuVert.update();
             }else {
 
                 System.out.println("Hielo");
@@ -98,6 +106,7 @@ public class PanelHabitat extends JPanel {
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
                 repaint();
+                panelMenuVert.update();
             }else {
 
                 System.out.println("Humedal");
@@ -107,6 +116,7 @@ public class PanelHabitat extends JPanel {
                 comederoLava.addComida(colocarComida.queComida());
                 colocarComida.setDesativado();
                 repaint();
+                panelMenuVert.update();
             }else {
 
                 System.out.println("Lava");
@@ -117,6 +127,7 @@ public class PanelHabitat extends JPanel {
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
                 repaint();
+                panelMenuVert.update();
             }else {
 
                 System.out.println("Lucha");
@@ -127,6 +138,7 @@ public class PanelHabitat extends JPanel {
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
                 repaint();
+                panelMenuVert.update();
             }else {
 
                 System.out.println("Prado");
@@ -137,6 +149,7 @@ public class PanelHabitat extends JPanel {
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
                 repaint();
+                panelMenuVert.update();
             }else {
 
                 System.out.println("Setas");
@@ -147,6 +160,7 @@ public class PanelHabitat extends JPanel {
                 System.out.println("Comida agregada");
                 colocarComida.setDesativado();
                 repaint();
+                panelMenuVert.update();
             }else {
 
                 System.out.println("Siniestro");
