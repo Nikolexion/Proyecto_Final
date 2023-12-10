@@ -43,9 +43,7 @@ public class PanelHabitat extends JPanel {
                 repaint();
                 panelMenuVert.update();
             }else {
-
-                    HabitatAgua.agua.addPokemon(panelMenuVert.pkmn1);
-
+                HabitatAgua.agua.addPokemon(panelMenuVert.pkmn1);
                 System.out.println("Agua");
                 repaint();
             }
@@ -58,7 +56,8 @@ public class PanelHabitat extends JPanel {
                 repaint();
                 panelMenuVert.update();
             }else {
-
+                HabitatBosque.bosque.addPokemon(panelMenuVert.pkmn1);
+                panelMenuVert.pkmn1 = null;
                 System.out.println("Bosque");
             }
         } else if (ZonaCielo.contienePunto(e.getX(),e.getY())){
@@ -69,7 +68,8 @@ public class PanelHabitat extends JPanel {
                 repaint();
                 panelMenuVert.update();
             }else {
-
+                HabitatCielo.cielo.addPokemon(panelMenuVert.pkmn1);
+                panelMenuVert.pkmn1 = null;
                 System.out.println("Cielo");
             }
         } else if (ZonaCueva.contienePunto(e.getX(),e.getY())) {
@@ -80,7 +80,8 @@ public class PanelHabitat extends JPanel {
                 repaint();
                 panelMenuVert.update();
             }else {
-
+                HabitatCueva.cueva.addPokemon(panelMenuVert.pkmn1);
+                panelMenuVert.pkmn1 = null;
                 System.out.println("Cueva");
             }
         } else if (ZonaElectrico.contienePunto(e.getX(),e.getY())) {
@@ -91,7 +92,8 @@ public class PanelHabitat extends JPanel {
                 repaint();
                 panelMenuVert.update();
             }else {
-
+                HabitatElectrico.electrico.addPokemon(panelMenuVert.pkmn1);
+                panelMenuVert.pkmn1 = null;
                 System.out.println("Electrico");
             }
         } else if (ZonaHielo.contienePunto(e.getX(),e.getY())) {
@@ -102,7 +104,8 @@ public class PanelHabitat extends JPanel {
                 repaint();
                 panelMenuVert.update();
             }else {
-
+                HabitatHielo.hielo.addPokemon(panelMenuVert.pkmn1);
+                panelMenuVert.pkmn1 = null;
                 System.out.println("Hielo");
             }
         } else if (ZonaHumedal.contienePunto(e.getX(),e.getY())) {
@@ -113,7 +116,8 @@ public class PanelHabitat extends JPanel {
                 repaint();
                 panelMenuVert.update();
             }else {
-
+                HabitatHumedal.humedal.addPokemon(panelMenuVert.pkmn1);
+                panelMenuVert.pkmn1 = null;
                 System.out.println("Humedal");
             }
         } else if (ZonaLava.contienePunto(e.getX(),e.getY())) {
@@ -123,7 +127,8 @@ public class PanelHabitat extends JPanel {
                 repaint();
                 panelMenuVert.update();
             }else {
-
+                HabitatLava.lava.addPokemon(panelMenuVert.pkmn1);
+                panelMenuVert.pkmn1 = null;
                 System.out.println("Lava");
             }
         } else if (ZonaLucha.contienePunto(e.getX(),e.getY())) {
@@ -134,7 +139,8 @@ public class PanelHabitat extends JPanel {
                 repaint();
                 panelMenuVert.update();
             }else {
-
+                HabitatLucha.lucha.addPokemon(panelMenuVert.pkmn1);
+                panelMenuVert.pkmn1 = null;
                 System.out.println("Lucha");
             }
         } else if (ZonaPrado.contienePunto(e.getX(),e.getY())) {
@@ -145,7 +151,8 @@ public class PanelHabitat extends JPanel {
                 repaint();
                 panelMenuVert.update();
             }else {
-
+                HabitatPrado.prado.addPokemon(panelMenuVert.pkmn1);
+                panelMenuVert.pkmn1 = null;
                 System.out.println("Prado");
             }
         } else if (ZonaSetas.contienePunto(e.getX(),e.getY())) {
@@ -156,7 +163,8 @@ public class PanelHabitat extends JPanel {
                 repaint();
                 panelMenuVert.update();
             }else {
-
+                HabitatSetas.setas.addPokemon(panelMenuVert.pkmn1);
+                panelMenuVert.pkmn1 = null;
                 System.out.println("Setas");
             }
         } else if (ZonaSiniestro.contienePunto(e.getX(),e.getY())) {
@@ -167,7 +175,8 @@ public class PanelHabitat extends JPanel {
                 repaint();
                 panelMenuVert.update();
             }else {
-
+                HabitatSiniestro.siniestro.addPokemon(panelMenuVert.pkmn1);
+                panelMenuVert.pkmn1 = null;
                 System.out.println("Siniestro");
             }
         }
