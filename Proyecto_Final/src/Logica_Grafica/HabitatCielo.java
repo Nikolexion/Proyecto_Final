@@ -36,6 +36,8 @@ public class HabitatCielo extends JPanel{
     }
     public void paint(Graphics g){
         super.paint(g);
+        g.drawImage(cielo.getImage(),x,y,ancho,alto,this);
+        g.drawImage(comedero.getImage(),x,y+155,ancho,40,this);
         vistaComida.dibujarComidas(g,x + 5,y + 155, comedero.getComedero());
         switch (cielo.getSize()){
             case 1:

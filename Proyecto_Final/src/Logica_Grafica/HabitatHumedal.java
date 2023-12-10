@@ -36,6 +36,8 @@ public class HabitatHumedal extends JPanel{
     }
     public void paint(Graphics g){
         super.paint(g);
+        g.drawImage(humedal.getImage(),x,y,ancho,alto,this);
+        g.drawImage(comedero.getImage(),x,y+155,ancho,40,this);
         vistaComida.dibujarComidas(g,x + 5,y + 155, comedero.getComedero());
         switch (humedal.getSize()){
             case 1:

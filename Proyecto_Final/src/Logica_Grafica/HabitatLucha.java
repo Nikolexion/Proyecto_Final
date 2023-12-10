@@ -36,6 +36,8 @@ public class HabitatLucha extends JPanel{
     }
     public void paint(Graphics g){
         super.paint(g);
+        g.drawImage(lucha.getImage(),x,y,ancho,alto,this);
+        g.drawImage(comedero.getImage(),x,y+155,ancho,40,this);
         vistaComida.dibujarComidas(g,x + 5,y + 155, comedero.getComedero());
         switch (lucha.getSize()){
             case 1:

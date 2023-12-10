@@ -36,6 +36,8 @@ public class HabitatPrado extends JPanel{
     }
     public void paint(Graphics g){
         super.paint(g);
+        g.drawImage(prado.getImage(),x,y,ancho,alto,this);
+        g.drawImage(comedero.getImage(),x,y+155,ancho,40,this);
         vistaComida.dibujarComidas(g,x + 5,y + 155, comedero.getComedero());
         switch (prado.getSize()){
             case 1:

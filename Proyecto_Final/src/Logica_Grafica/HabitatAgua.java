@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 
-public class HabitatAgua extends JPanel implements ActionListener {
+public class HabitatAgua extends JPanel {
     public Agua agua;
     private Zona zona, zonaComedero;
     private Comedero comedero;
@@ -32,8 +32,6 @@ public class HabitatAgua extends JPanel implements ActionListener {
         random = new Random();
         agua = new Agua();
         vistaComida = new VistaComida();
-        timerpkmn = new Timer(1000,this);
-        timerpkmn.start();
         comedero = new Comedero();
         comedero.addComida(new Pinia());
         comedero.addComida(new Pinia());
@@ -46,17 +44,6 @@ public class HabitatAgua extends JPanel implements ActionListener {
         JButton botonComida = new JButton();
         zonaComedero = new Zona(x,y + 155,ancho,40,botonComida);
         comedero.setZona(zonaComedero);
-
-/*        xpkmn1 = x +random.nextInt(210);
-        ypkmn1 = y + random.nextInt(110);
-        xpkmn2 = x +random.nextInt(210);
-        ypkmn2 = y + random.nextInt(110);
-        xpkmn3 = x +random.nextInt(210);
-        ypkmn3 = y + random.nextInt(110);
-        xpkmn4 = x +random.nextInt(210);
-        ypkmn4 = y + random.nextInt(110);
-        xpkmn5 = x +random.nextInt(210);
-        ypkmn5 = y + random.nextInt(110);*/
     }
 
     public Zona getZona() {
@@ -64,6 +51,8 @@ public class HabitatAgua extends JPanel implements ActionListener {
     }
     public void paint(Graphics g){
         super.paint(g);
+        g.drawImage(agua.getImage(),x,y,ancho,alto,this);
+        g.drawImage(comedero.getImage(),x,y+155,ancho,40,this);
         vistaComida.dibujarComidas(g,x + 5,y + 155, comedero.getComedero());
         switch (agua.getSize()){
             case 1:
@@ -116,152 +105,4 @@ public class HabitatAgua extends JPanel implements ActionListener {
         }
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        /*switch (agua.getSize()){
-            case 1:
-                if(xpkmn1 <= x +15|| xpkmn1+80 >= x + ancho){
-                    xVelocity1 = xVelocity1 * -1;
-                }
-                xpkmn1 = xpkmn1 + xVelocity1;
-                if(ypkmn1 <= y || ypkmn1+60 >= y + 125){
-                    yVelocity1 = yVelocity1 * -1;
-                }
-                ypkmn1 = ypkmn1 + yVelocity1;
-                repaint();
-                break;
-            case 2:
-                if(xpkmn1 <= x +15|| xpkmn1+80 >= x + ancho){
-                    xVelocity1 = xVelocity1 * -1;
-                }
-                xpkmn1 = xpkmn1 + xVelocity1;
-                if(ypkmn1 <= y || ypkmn1+60 >= y + 125){
-                    yVelocity1 = yVelocity1 * -1;
-                }
-                ypkmn1 = ypkmn1 + yVelocity1;
-
-                if(xpkmn2 <= x +15|| xpkmn2+80 >= x + ancho){
-                    xVelocity2 = xVelocity2 * -1;
-                }
-                xpkmn2 = xpkmn2 + xVelocity2;
-                if(ypkmn2 <= y || ypkmn2+60 >= y + 125){
-                    yVelocity2 = yVelocity2 * -1;
-                }
-                ypkmn2 = ypkmn2 + yVelocity2;
-                break;
-            case 3:
-                if(xpkmn1 <= x +15|| xpkmn1+80 >= x + ancho){
-                    xVelocity1 = xVelocity1 * -1;
-                }
-                xpkmn1 = xpkmn1 + xVelocity1;
-                if(ypkmn1 <= y || ypkmn1+60 >= y + 125){
-                    yVelocity1 = yVelocity1 * -1;
-                }
-                ypkmn1 = ypkmn1 + yVelocity1;
-
-                if(xpkmn2 <= x +15|| xpkmn2+80 >= x + ancho){
-                    xVelocity2 = xVelocity2 * -1;
-                }
-                xpkmn2 = xpkmn2 + xVelocity2;
-                if(ypkmn2 <= y || ypkmn2+60 >= y + 125){
-                    yVelocity2 = yVelocity2 * -1;
-                }
-                ypkmn2 = ypkmn2 + yVelocity2;
-
-                if(xpkmn3 <= x +15|| xpkmn3+80 >= x + ancho){
-                    xVelocity3 = xVelocity3 * -1;
-                }
-                xpkmn3 = xpkmn3 + xVelocity3;
-                if(ypkmn3 <= y || ypkmn3+60 >= y + 125){
-                    yVelocity3 = yVelocity3 * -1;
-                }
-                ypkmn3 = ypkmn3 + yVelocity3;
-                break;
-            case 4:
-                if(xpkmn1 <= x +15|| xpkmn1+80 >= x + ancho){
-                    xVelocity1 = xVelocity1 * -1;
-                }
-                xpkmn1 = xpkmn1 + xVelocity1;
-                if(ypkmn1 <= y || ypkmn1+60 >= y + 125){
-                    yVelocity1 = yVelocity1 * -1;
-                }
-                ypkmn1 = ypkmn1 + yVelocity1;
-
-                if(xpkmn2 <= x +15|| xpkmn2+80 >= x + ancho){
-                    xVelocity2 = xVelocity2 * -1;
-                }
-                xpkmn2 = xpkmn2 + xVelocity2;
-                if(ypkmn2 <= y || ypkmn2+60 >= y + 125){
-                    yVelocity2 = yVelocity2 * -1;
-                }
-                ypkmn2 = ypkmn2 + yVelocity2;
-
-                if(xpkmn3 <= x +15|| xpkmn3+80 >= x + ancho){
-                    xVelocity3 = xVelocity3 * -1;
-                }
-                xpkmn3 = xpkmn3 + xVelocity3;
-                if(ypkmn3 <= y || ypkmn3+60 >= y + 125){
-                    yVelocity3 = yVelocity3 * -1;
-                }
-                ypkmn3 = ypkmn3 + yVelocity3;
-
-                if(xpkmn4 <= x +15|| xpkmn4+80 >= x + ancho){
-                    xVelocity4 = xVelocity4 * -1;
-                }
-                xpkmn4 = xpkmn4 + xVelocity4;
-                if(ypkmn4 <= y || ypkmn4+60 >= y + 125){
-                    yVelocity4 = yVelocity4 * -1;
-                }
-                ypkmn4 = ypkmn4 + yVelocity4;
-                break;
-            case 5:
-                if(xpkmn1 <= x +15|| xpkmn1+80 >= x + ancho){
-                    xVelocity1 = xVelocity1 * -1;
-                }
-                xpkmn1 = xpkmn1 + xVelocity1;
-                if(ypkmn1 <= y || ypkmn1+60 >= y + 125){
-                    yVelocity1 = yVelocity1 * -1;
-                }
-                ypkmn1 = ypkmn1 + yVelocity1;
-
-                if(xpkmn2 <= x +15|| xpkmn2+80 >= x + ancho){
-                    xVelocity2 = xVelocity2 * -1;
-                }
-                xpkmn2 = xpkmn2 + xVelocity2;
-                if(ypkmn2 <= y || ypkmn2+60 >= y + 125){
-                    yVelocity2 = yVelocity2 * -1;
-                }
-                ypkmn2 = ypkmn2 + yVelocity2;
-
-                if(xpkmn3 <= x +15|| xpkmn3+80 >= x + ancho){
-                    xVelocity3 = xVelocity3 * -1;
-                }
-                xpkmn3 = xpkmn3 + xVelocity3;
-                if(ypkmn3 <= y || ypkmn3+60 >= y + 125){
-                    yVelocity3 = yVelocity3 * -1;
-                }
-                ypkmn3 = ypkmn3 + yVelocity3;
-
-                if(xpkmn4 <= x +15|| xpkmn4+80 >= x + ancho){
-                    xVelocity4 = xVelocity4 * -1;
-                }
-                xpkmn4 = xpkmn4 + xVelocity4;
-                if(ypkmn4 <= y || ypkmn4+60 >= y + 125){
-                    yVelocity4 = yVelocity4 * -1;
-                }
-                ypkmn4 = ypkmn4 + yVelocity4;
-
-                if(xpkmn5 <= x +15|| xpkmn5+80 >= x + ancho){
-                    xVelocity5 = xVelocity5 * -1;
-                }
-                xpkmn5 = xpkmn5 + xVelocity5;
-                if(ypkmn5 <= y || ypkmn5+60 >= y + 125){
-                    yVelocity5 = yVelocity5 * -1;
-                }
-                ypkmn5 = ypkmn5 + yVelocity5;
-                break;
-        }*/
-
-    repaint();
-    }
 }
