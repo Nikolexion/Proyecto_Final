@@ -29,13 +29,23 @@ public abstract class Habitat {
                                               + " no puede ir en este habitat. ");
         }
     }
-    public Pokemon getPokemon(Pokemon pokemon){
+    public Pokemon getPokemonEspecifico(Pokemon pokemon){
         int index = this.arrayList.indexOf(pokemon);
         if (index != -1) {
             return this.arrayList.remove(index);
         } else {
             return null;
         }
+    }
+    public Pokemon getPokemon(int index){
+        if (arrayList.size() > 0){
+            return arrayList.get(index);
+        } else {
+            return null;
+        }
+    }
+    public int getSize(){
+        return arrayList.size();
     }
 
     public Image getImage() {
