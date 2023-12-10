@@ -1,6 +1,7 @@
 package Logica_Grafica;
 import Logica.Comidas.*;
 import Logica.Habitat.Agua;
+import Logica.State.EstadoNormal;
 
 import javax.swing.*;
 import java.awt.*;
@@ -102,6 +103,10 @@ public class HabitatAgua extends JPanel {
     public void update(){
         for (int i = 0; i < agua.getSize(); i++){
             agua.getPokemon(i).refrescarEstado();
+            if (agua.getPokemon(i).isEstaComiendo()){
+                agua.getPokemon(i).comer(comedero.getComida());
+
+            }
         }
     }
 

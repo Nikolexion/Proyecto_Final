@@ -21,7 +21,11 @@ public class Comedero implements EventManager{
     }
 
     public Comida getComida() {
-        return this.comedero.remove(0);
+        if (comedero.size() > 0){
+            return this.comedero.remove(0);
+        } else {
+            return null;
+        }
     }
     public Comida cualComida(int index){
 
@@ -43,6 +47,9 @@ public class Comedero implements EventManager{
 
     public ArrayList<Comida> getComedero() {
         return comedero;
+    }
+    public int getSize(){
+        return comedero.size();
     }
 
     @Override
