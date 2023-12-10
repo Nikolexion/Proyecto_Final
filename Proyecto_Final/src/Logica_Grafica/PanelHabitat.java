@@ -7,6 +7,7 @@ import Logica.ManejoDeColocacion.ColocarComida;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
+import java.util.Objects;
 
 public class PanelHabitat extends JPanel {
     PanelMenuVert panelMenuVert;
@@ -37,11 +38,16 @@ public class PanelHabitat extends JPanel {
     public void clicked(MouseEvent e) throws HabitatNoPermitePokemon {
         if (ZonaAgua.contienePunto(e.getX(),e.getY())){
             if (colocarComida.estado()){
-                comederoAgua.addComida(colocarComida.queComida());
-                System.out.println("Comida agregada");
-                colocarComida.setDesativado();
-                repaint();
-                panelMenuVert.update();
+                if (colocarComida.queComida().getEnumComidas().getNombre().equals("Pinia")){
+                    comederoAgua.addComida(colocarComida.queComida());
+                    System.out.println("Comida agregada");
+                    colocarComida.setDesativado();
+                    repaint();
+                    panelMenuVert.update();
+                } else {
+                    colocarComida.setDesativado();
+                    panelMenuVert.update();
+                }
             }else {
                 HabitatAgua.agua.addPokemon(panelMenuVert.pkmn1);
                 panelMenuVert.pkmn1 = null;
@@ -54,11 +60,16 @@ public class PanelHabitat extends JPanel {
 
         } else if (ZonaBosque.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-                comederoBosque.addComida(colocarComida.queComida());
-                System.out.println("Comida agregada");
-                colocarComida.setDesativado();
-                repaint();
-                panelMenuVert.update();
+                if (colocarComida.queComida().getEnumComidas().getNombre().equals("Latano")){
+                    comederoBosque.addComida(colocarComida.queComida());
+                    System.out.println("Comida agregada");
+                    colocarComida.setDesativado();
+                    repaint();
+                    panelMenuVert.update();
+                } else {
+                    colocarComida.setDesativado();
+                    panelMenuVert.update();
+                }
             }else {
                 HabitatBosque.bosque.addPokemon(panelMenuVert.pkmn1);
                 for (int i = 0; i < HabitatBosque.bosque.getSize(); i++){
@@ -69,11 +80,16 @@ public class PanelHabitat extends JPanel {
             }
         } else if (ZonaCielo.contienePunto(e.getX(),e.getY())){
             if (colocarComida.estado()){
-                comederoCielo.addComida(colocarComida.queComida());
-                System.out.println("Comida agregada");
-                colocarComida.setDesativado();
-                repaint();
-                panelMenuVert.update();
+                if (colocarComida.queComida().getEnumComidas().getNombre().equals("Latano")){
+                    comederoCielo.addComida(colocarComida.queComida());
+                    System.out.println("Comida agregada");
+                    colocarComida.setDesativado();
+                    repaint();
+                    panelMenuVert.update();
+                } else {
+                    colocarComida.setDesativado();
+                    panelMenuVert.update();
+                }
             }else {
                 HabitatCielo.cielo.addPokemon(panelMenuVert.pkmn1);
                 for (int i = 0; i < HabitatCielo.cielo.getSize(); i++){
@@ -84,11 +100,16 @@ public class PanelHabitat extends JPanel {
             }
         } else if (ZonaCueva.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-                comederoCueva.addComida(colocarComida.queComida());
-                System.out.println("Comida agregada");
-                colocarComida.setDesativado();
-                repaint();
-                panelMenuVert.update();
+                if (colocarComida.queComida().getEnumComidas().getNombre().equals("Pokocho")){
+                    comederoCueva.addComida(colocarComida.queComida());
+                    System.out.println("Comida agregada");
+                    colocarComida.setDesativado();
+                    repaint();
+                    panelMenuVert.update();
+                } else {
+                    colocarComida.setDesativado();
+                    panelMenuVert.update();
+                }
             }else {
                 HabitatCueva.cueva.addPokemon(panelMenuVert.pkmn1);
                 for (int i = 0; i < HabitatCueva.cueva.getSize(); i++){
@@ -99,11 +120,16 @@ public class PanelHabitat extends JPanel {
             }
         } else if (ZonaElectrico.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-                comederoElectrico.addComida(colocarComida.queComida());
-                System.out.println("Comida agregada");
-                colocarComida.setDesativado();
-                repaint();
-                panelMenuVert.update();
+                if (colocarComida.queComida().getEnumComidas().getNombre().equals("Pinia")){
+                    comederoElectrico.addComida(colocarComida.queComida());
+                    System.out.println("Comida agregada");
+                    colocarComida.setDesativado();
+                    repaint();
+                    panelMenuVert.update();
+                } else {
+                    colocarComida.setDesativado();
+                    panelMenuVert.update();
+                }
             }else {
                 HabitatElectrico.electrico.addPokemon(panelMenuVert.pkmn1);
                 for (int i = 0; i < HabitatElectrico.electrico.getSize(); i++){
@@ -114,11 +140,16 @@ public class PanelHabitat extends JPanel {
             }
         } else if (ZonaHielo.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-                comederoHielo.addComida(colocarComida.queComida());
-                System.out.println("Comida agregada");
-                colocarComida.setDesativado();
-                repaint();
-                panelMenuVert.update();
+                if (colocarComida.queComida().getEnumComidas().getNombre().equals("Frambu")){
+                    comederoHielo.addComida(colocarComida.queComida());
+                    System.out.println("Comida agregada");
+                    colocarComida.setDesativado();
+                    repaint();
+                    panelMenuVert.update();
+                } else {
+                    colocarComida.setDesativado();
+                    panelMenuVert.update();
+                }
             }else {
                 HabitatHielo.hielo.addPokemon(panelMenuVert.pkmn1);
                 for (int i = 0; i < HabitatHielo.hielo.getSize(); i++){
@@ -129,11 +160,16 @@ public class PanelHabitat extends JPanel {
             }
         } else if (ZonaHumedal.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-                comederoHumedal.addComida(colocarComida.queComida());
-                System.out.println("Comida agregada");
-                colocarComida.setDesativado();
-                repaint();
-                panelMenuVert.update();
+                if (colocarComida.queComida().getEnumComidas().getNombre().equals("Pinia")){
+                    comederoHumedal.addComida(colocarComida.queComida());
+                    System.out.println("Comida agregada");
+                    colocarComida.setDesativado();
+                    repaint();
+                    panelMenuVert.update();
+                } else {
+                    colocarComida.setDesativado();
+                    panelMenuVert.update();
+                }
             }else {
                 HabitatHumedal.humedal.addPokemon(panelMenuVert.pkmn1);
                 for (int i = 0; i < HabitatHumedal.humedal.getSize(); i++){
@@ -144,10 +180,16 @@ public class PanelHabitat extends JPanel {
             }
         } else if (ZonaLava.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-                comederoLava.addComida(colocarComida.queComida());
-                colocarComida.setDesativado();
-                repaint();
-                panelMenuVert.update();
+                if (colocarComida.queComida().getEnumComidas().getNombre().equals("Pokocho")){
+                    comederoLava.addComida(colocarComida.queComida());
+                    System.out.println("Comida agregada");
+                    colocarComida.setDesativado();
+                    repaint();
+                    panelMenuVert.update();
+                } else {
+                    colocarComida.setDesativado();
+                    panelMenuVert.update();
+                }
             }else {
                 HabitatLava.lava.addPokemon(panelMenuVert.pkmn1);
                 for (int i = 0; i < HabitatLava.lava.getSize(); i++){
@@ -158,11 +200,16 @@ public class PanelHabitat extends JPanel {
             }
         } else if (ZonaLucha.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-                comederoLucha.addComida(colocarComida.queComida());
-                System.out.println("Comida agregada");
-                colocarComida.setDesativado();
-                repaint();
-                panelMenuVert.update();
+                if (colocarComida.queComida().getEnumComidas().getNombre().equals("Latano")){
+                    comederoLucha.addComida(colocarComida.queComida());
+                    System.out.println("Comida agregada");
+                    colocarComida.setDesativado();
+                    repaint();
+                    panelMenuVert.update();
+                } else {
+                    colocarComida.setDesativado();
+                    panelMenuVert.update();
+                }
             }else {
                 HabitatLucha.lucha.addPokemon(panelMenuVert.pkmn1);
                 for (int i = 0; i < HabitatLucha.lucha.getSize(); i++){
@@ -173,11 +220,16 @@ public class PanelHabitat extends JPanel {
             }
         } else if (ZonaPrado.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-                comederoPrado.addComida(colocarComida.queComida());
-                System.out.println("Comida agregada");
-                colocarComida.setDesativado();
-                repaint();
-                panelMenuVert.update();
+                if (colocarComida.queComida().getEnumComidas().getNombre().equals("Frambu")){
+                    comederoPrado.addComida(colocarComida.queComida());
+                    System.out.println("Comida agregada");
+                    colocarComida.setDesativado();
+                    repaint();
+                    panelMenuVert.update();
+                } else {
+                    colocarComida.setDesativado();
+                    panelMenuVert.update();
+                }
             }else {
                 HabitatPrado.prado.addPokemon(panelMenuVert.pkmn1);
                 for (int i = 0; i < HabitatPrado.prado.getSize(); i++){
@@ -188,11 +240,16 @@ public class PanelHabitat extends JPanel {
             }
         } else if (ZonaSetas.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-                comederoSetas.addComida(colocarComida.queComida());
-                System.out.println("Comida agregada");
-                colocarComida.setDesativado();
-                repaint();
-                panelMenuVert.update();
+                if (colocarComida.queComida().getEnumComidas().getNombre().equals("Frambu")){
+                    comederoSetas.addComida(colocarComida.queComida());
+                    System.out.println("Comida agregada");
+                    colocarComida.setDesativado();
+                    repaint();
+                    panelMenuVert.update();
+                } else {
+                    colocarComida.setDesativado();
+                    panelMenuVert.update();
+                }
             }else {
                 HabitatSetas.setas.addPokemon(panelMenuVert.pkmn1);
                 for (int i = 0; i < HabitatSetas.setas.getSize(); i++){
@@ -203,11 +260,16 @@ public class PanelHabitat extends JPanel {
             }
         } else if (ZonaSiniestro.contienePunto(e.getX(),e.getY())) {
             if (colocarComida.estado()){
-                comederoSiniestro.addComida(colocarComida.queComida());
-                System.out.println("Comida agregada");
-                colocarComida.setDesativado();
-                repaint();
-                panelMenuVert.update();
+                if (colocarComida.queComida().getEnumComidas().getNombre().equals("Pokocho")){
+                    comederoSiniestro.addComida(colocarComida.queComida());
+                    System.out.println("Comida agregada");
+                    colocarComida.setDesativado();
+                    repaint();
+                    panelMenuVert.update();
+                } else {
+                    colocarComida.setDesativado();
+                    panelMenuVert.update();
+                }
             }else {
                 HabitatSiniestro.siniestro.addPokemon(panelMenuVert.pkmn1);
                 for (int i = 0; i < HabitatSiniestro.siniestro.getSize(); i++){

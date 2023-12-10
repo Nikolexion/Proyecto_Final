@@ -6,10 +6,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public enum EnumComidas {
-    POKOCHO("pokocho", 200, "resources/pokocho.png"),
-    FRAMBU("frambu", 200, "resources/Baya_Frambu.png"),
-    LATANO("latano", 200, "resources/Baya_Latano.png"),
-    PINIA("pinia", 200, "resources/Baya_Pinia.png");
+    POKOCHO("Pokocho", 200, "resources/pokocho.png"),
+    FRAMBU("Frambu", 200, "resources/Baya_Frambu.png"),
+    LATANO("Latano", 200, "resources/Baya_Latano.png"),
+    PINIA("Pinia", 200, "resources/Baya_Pinia.png");
 
     private String nombre;
     private int precio;
