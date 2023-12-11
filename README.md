@@ -12,7 +12,10 @@ La versión de Maven utilizada en el proyecto es Bundled (Maven 3) 3.9.2
 
 Para poder ejecutar el programa, se debe copiar y pegar el repositorio GitHub en la carpeta que usted desee. Luego, el programa se puede ejecutar en la carpeta Proyecto_Final/src/Logica_Grafica/Main.java.
 Se debería presentar una ventana como se ve a continuación:
-fotoventana
+
+![image](https://github.com/Nikolexion/Proyecto_Final/assets/146101101/17b9da78-93d1-4177-9c7e-8905367b66e2)
+
+
 
 A partir de esta ventana, usted podrá crear nuevos pokemons mediante la listas desplegables de la izquierda, probar a clickear sobre diversos habitats para poner los pokemones en el habitat que desee. Si el pokemon no pertenece al hábitat soltarán alertas. Además, puede seleccionar cuatro de las posibles Comidas compatibles según las preferencias del Pokemon y depositarlas en cualquiera de los comederos. Si la comida no es la preferida de los pokemons en el hábitat delimitado, soltará una alerta. 
 
