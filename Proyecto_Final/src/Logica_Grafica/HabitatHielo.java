@@ -13,6 +13,7 @@ public class HabitatHielo extends JPanel{
     public int x,y;
     private int ancho,alto;
     private VistaComida vistaComida;
+    public boolean flag;
 
     public HabitatHielo() {
         hielo = new Hielo();
@@ -88,6 +89,11 @@ public class HabitatHielo extends JPanel{
             if (hielo.getPokemon(i).isEstaComiendo()){
                 hielo.getPokemon(i).comer(comedero.getComida());
 
+            }
+            if (comedero.getSize() == 0) {
+                flag = true;
+            }else {
+                flag = false;
             }
         }
     }

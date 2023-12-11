@@ -13,6 +13,7 @@ public class HabitatElectrico extends JPanel{
     public int x,y;
     private int ancho,alto;
     private VistaComida vistaComida;
+    public boolean flag;
 
     public HabitatElectrico() {
         electrico = new Electrico();
@@ -89,6 +90,11 @@ public class HabitatElectrico extends JPanel{
             if (electrico.getPokemon(i).isEstaComiendo()){
                 electrico.getPokemon(i).comer(comedero.getComida());
 
+            }
+            if (comedero.getSize() == 0) {
+                flag = true;
+            }else {
+                flag = false;
             }
         }
     }

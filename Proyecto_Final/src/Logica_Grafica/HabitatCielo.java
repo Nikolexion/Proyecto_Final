@@ -13,6 +13,7 @@ public class HabitatCielo extends JPanel{
     public int x,y;
     private int ancho,alto;
     private VistaComida vistaComida;
+    public boolean flag;
     public HabitatCielo() {
         cielo = new Cielo();
         vistaComida = new VistaComida();
@@ -89,6 +90,11 @@ public class HabitatCielo extends JPanel{
             if (cielo.getPokemon(i).isEstaComiendo()){
                 cielo.getPokemon(i).comer(comedero.getComida());
 
+            }
+            if (comedero.getSize() == 0) {
+                flag = true;
+            }else {
+                flag = false;
             }
         }
     }

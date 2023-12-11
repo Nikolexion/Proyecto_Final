@@ -13,6 +13,7 @@ public class HabitatBosque extends JPanel{
     public int x,y;
     private int ancho,alto;
     private VistaComida vistaComida;
+    public boolean flag;
 
     public HabitatBosque() {
         bosque = new Bosque();
@@ -89,6 +90,11 @@ public class HabitatBosque extends JPanel{
             if (bosque.getPokemon(i).isEstaComiendo()){
                 bosque.getPokemon(i).comer(comedero.getComida());
 
+            }
+            if (comedero.getSize()== 0) {
+                flag = true;
+            }else {
+                flag = false;
             }
         }
     }

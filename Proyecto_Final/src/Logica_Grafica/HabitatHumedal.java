@@ -13,6 +13,7 @@ public class HabitatHumedal extends JPanel{
     public int x,y;
     private int ancho,alto;
     private VistaComida vistaComida;
+    public boolean flag;
 
     public HabitatHumedal() {
         humedal = new Humedal();
@@ -88,6 +89,11 @@ public class HabitatHumedal extends JPanel{
             if (humedal.getPokemon(i).isEstaComiendo()){
                 humedal.getPokemon(i).comer(comedero.getComida());
 
+            }
+            if (comedero.getSize() == 0) {
+                flag = true;
+            }else {
+                flag = false;
             }
         }
     }

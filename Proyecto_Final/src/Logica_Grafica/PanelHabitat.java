@@ -398,6 +398,7 @@ public class PanelHabitat extends JPanel {
         HabitatPrado.paint(g);
         HabitatSetas.paint(g);
         HabitatSiniestro.paint(g);
+        flags(g);
         repaint();
     }
     public void update(){
@@ -420,4 +421,28 @@ public class PanelHabitat extends JPanel {
     public void errorPokemon(){
         JOptionPane.showMessageDialog(PanelHabitat.this,"Este habitat no acepta este pokemon","Advertencia",0);
     }
+    public void flags(Graphics g){
+        boolean[] flagsActivas = {HabitatAgua.flag,HabitatBosque.flag, HabitatCielo.flag, HabitatCueva.flag, HabitatElectrico.flag, HabitatHielo.flag,
+                HabitatHumedal.flag, HabitatLava.flag, HabitatLucha.flag, HabitatPrado.flag, HabitatSetas.flag, HabitatSiniestro.flag};
+        String[] habitats = {"Falta comida en Habitat Agua", "Falta comida en Habitat Bosque", "Falta comida en Habitat Cielo",
+                "Falta comida en Habitat Cueva", "Falta comida en Habitat Electrico", "Falta comida en Habitat Hielo",
+                "Falta comida en Habitat Humedal", "Falta comida en Habitat Lava", "Falta comida en Habitat Lucha",
+                "Falta comida en Habitat Prado", "Falta comida en Habitat Setas", "Falta comida en Habitat Siniestro"};
+
+        int mensajesMostrados = 0;
+
+        for (int i = 0; i < flagsActivas.length; i++) {
+            if (flagsActivas[i]) {
+                g.drawString(habitats[i], 1210, 20 * mensajesMostrados + 695);
+                mensajesMostrados++;
+
+                // Mostrar hasta 5 mensajes a la vez
+                if (mensajesMostrados >= 5) {
+                    break;
+                }
+            }
+        }
+    }
+
+
 }

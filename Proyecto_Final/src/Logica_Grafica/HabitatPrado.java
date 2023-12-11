@@ -13,6 +13,7 @@ public class HabitatPrado extends JPanel{
     public int x,y;
     private int ancho,alto;
     private VistaComida vistaComida;
+    public boolean flag;
 
     public HabitatPrado() {
         prado = new Prado();
@@ -88,6 +89,11 @@ public class HabitatPrado extends JPanel{
             if (prado.getPokemon(i).isEstaComiendo()){
                 prado.getPokemon(i).comer(comedero.getComida());
 
+            }
+            if (comedero.getSize() == 0) {
+                flag = true;
+            }else {
+                flag = false;
             }
         }
     }

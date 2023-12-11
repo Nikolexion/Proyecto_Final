@@ -13,6 +13,7 @@ public class HabitatCueva extends JPanel{
     public int x,y;
     private int ancho,alto;
     private VistaComida vistaComida;
+    public boolean flag;
 
     public HabitatCueva() {
         cueva = new Cueva();
@@ -89,6 +90,11 @@ public class HabitatCueva extends JPanel{
             if (cueva.getPokemon(i).isEstaComiendo()){
                 cueva.getPokemon(i).comer(comedero.getComida());
 
+            }
+            if (cueva.getSize() == 0) {
+                flag = true;
+            }else {
+                flag = false;
             }
         }
     }

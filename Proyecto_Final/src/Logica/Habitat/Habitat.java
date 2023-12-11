@@ -47,6 +47,9 @@ public abstract class Habitat {
     public int getSize(){
         return arrayList.size();
     }
+    public int getSizeComedero(){
+        return comedero.getSize();
+    }
 
     public Image getImage() {
         return image;

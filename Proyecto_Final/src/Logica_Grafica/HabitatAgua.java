@@ -13,21 +13,10 @@ public class HabitatAgua extends JPanel {
     public Agua agua;
     private Zona zona, zonaComedero;
     private Comedero comedero;
-    private float xpkmn1,ypkmn1,xpkmn2,ypkmn2,xpkmn3,ypkmn3,xpkmn4,ypkmn4,xpkmn5,ypkmn5;
-    private float xVelocity1 = -20F;
-    private float yVelocity1 = -20F;
-    private float xVelocity2 = -20F;
-    private float yVelocity2 = -20F;
-    private float xVelocity3 = -20F;
-    private float yVelocity3 = -20F;
-    private float xVelocity4 = -20F;
-    private float yVelocity4 = -20F;
-    private float xVelocity5 = -20F;
-    private float yVelocity5 = -20F;
     private int ancho,alto;
     public int x,y;
     private VistaComida vistaComida;
-    private Timer timerpkmn;
+    public boolean flag;
     Random random;
     public HabitatAgua() {
         random = new Random();
@@ -106,6 +95,13 @@ public class HabitatAgua extends JPanel {
             if (agua.getPokemon(i).isEstaComiendo()){
                 agua.getPokemon(i).comer(comedero.getComida());
 
+            }
+            if (comedero.getSize() == 0) {
+                System.out.println("no hay en agua");
+                flag = true;
+            }else {
+                System.out.println("Si hay en agua");
+                flag = false;
             }
         }
     }

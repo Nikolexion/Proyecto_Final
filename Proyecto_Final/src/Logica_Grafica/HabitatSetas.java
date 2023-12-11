@@ -13,6 +13,7 @@ public class HabitatSetas extends JPanel{
     public int x,y;
     private int ancho,alto;
     private VistaComida vistaComida;
+    public boolean flag;
 
     public HabitatSetas() {
         setas = new Setas();
@@ -88,6 +89,11 @@ public class HabitatSetas extends JPanel{
             if (setas.getPokemon(i).isEstaComiendo()){
                 setas.getPokemon(i).comer(comedero.getComida());
 
+            }
+            if (comedero.getSize() == 0) {
+                flag = true;
+            }else {
+                flag = false;
             }
         }
     }
