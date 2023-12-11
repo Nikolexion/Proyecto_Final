@@ -35,7 +35,7 @@ El software garantiza que los animales no puedan ser ubicados en hábitats inade
 
 Nuestro proyecto se ve representado por el siguiente diagrama UML:
 
-![UML Proyecto Semestral](https://github.com/Nikolexion/Proyecto_Final/assets/146101101/0df9dd91-5418-4da4-bfc3-f2ba554e4657)
+![UML Proyecto Semestral](https://github.com/Nikolexion/Proyecto_Final/assets/146101101/9086716f-8f87-4fba-9267-54acb8b48750)
 
 
 ## **Diagrama de casos de uso**
