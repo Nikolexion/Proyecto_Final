@@ -435,11 +435,11 @@ public class PanelHabitat extends JPanel {
 
         for (int i = 0; i < flagsActivas.length; i++) {
             if (flagsActivas[i]) {
-                g.drawString(habitats[i], 1210, 20 * mensajesMostrados + 695);
+                g.drawString(habitats[i], 1210, 20 * mensajesMostrados + 655);
                 mensajesMostrados++;
 
                 // Mostrar hasta 5 mensajes a la vez
-                if (mensajesMostrados >= 5) {
+                if (mensajesMostrados >= 8) {
                     break;
                 }
             }

@@ -47,7 +47,6 @@ public class PanelPrincipal extends JPanel {
         add(panelMenuVert.comprarFrambu);
         add(panelMenuVert.comprarPinia);
         add(panelMenuVert.comprarLatano);
-        add(panelMenuHorz.listaHabitats);
 
 
         addMouseListener(new MouseAdapter() {
@@ -91,7 +90,6 @@ public class PanelPrincipal extends JPanel {
         panelMenuVert.comprarFrambu.setBounds(150,515,98,123);
         panelMenuVert.comprarPinia.setBounds(25,655,98,123);
         panelMenuVert.comprarLatano.setBounds(150,655,98,123);
-        panelMenuHorz.listaHabitats.setBounds(1215,655,130,25);
 
 
     }
