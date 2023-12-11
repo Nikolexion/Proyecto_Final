@@ -41,6 +41,9 @@ fotouml
 
 Nuestro proyecto se ve simplificado por el siguiente diagrama de casos de uso:
 
+![image](https://github.com/Nikolexion/Proyecto_Final/assets/146101101/4dc3b3b3-54e1-4e08-9e0d-9715393d9a88)
+
+
 ## **Lista y justificación de los patrones de diseño utilizados**
 
 Para nuestro proyecto analizamos que había una gran cantidad de patrones útiles. Sin lugar a duda, los más usados dentro del proyecto fueron State, Observer y Singleton. State fue utilizado para emplear los estados de cada Pokemon (estado Normal, estado Hambriento, estado Comiendo y estado Muerto). De esta forma, podíamos hacer que los pokemones se acercaran a comer a los comederos y sacaran comida de los comederos de manera hilada a un Timer, y que este proceso se repitiera tantas veces como fuera necesario. Luego, observer fue implementado en las comidas de manera que las interfaces de las frutas se actualizaran junto a sus peticiones (por ejemplo, se uso en comedero para que cuando se añade la comida le anuncie a vistaComida que se agregó una comida para que se ejecute de nuevo y dibuje otra vez). Finalmente, Singleton fue utilizado para crear una instancia de PanelMenuVertical con el fin de poder pasarle su instancia a PanelHabitat para hilar la lógica entre ellas. 
