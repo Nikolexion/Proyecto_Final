@@ -85,6 +85,10 @@ public class HabitatHumedal extends JPanel{
     public void update(){
         for (int i = 0; i < humedal.getSize(); i++){
             humedal.getPokemon(i).refrescarEstado();
+            if (humedal.getPokemon(i).isEstaComiendo()){
+                humedal.getPokemon(i).comer(comedero.getComida());
+
+            }
         }
     }
 }

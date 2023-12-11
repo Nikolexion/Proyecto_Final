@@ -85,6 +85,10 @@ public class HabitatLava extends JPanel{
     public void update(){
         for (int i = 0; i < lava.getSize(); i++){
             lava.getPokemon(i).refrescarEstado();
+            if (lava.getPokemon(i).isEstaComiendo()){
+                lava.getPokemon(i).comer(comedero.getComida());
+
+            }
         }
     }
 }

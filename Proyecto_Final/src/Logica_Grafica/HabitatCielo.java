@@ -86,6 +86,10 @@ public class HabitatCielo extends JPanel{
     public void update(){
         for (int i = 0; i < cielo.getSize(); i++){
             cielo.getPokemon(i).refrescarEstado();
+            if (cielo.getPokemon(i).isEstaComiendo()){
+                cielo.getPokemon(i).comer(comedero.getComida());
+
+            }
         }
     }
 }

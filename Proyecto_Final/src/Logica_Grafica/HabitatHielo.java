@@ -85,6 +85,10 @@ public class HabitatHielo extends JPanel{
     public void update(){
         for (int i = 0; i < hielo.getSize(); i++){
             hielo.getPokemon(i).refrescarEstado();
+            if (hielo.getPokemon(i).isEstaComiendo()){
+                hielo.getPokemon(i).comer(comedero.getComida());
+
+            }
         }
     }
 }

@@ -85,6 +85,10 @@ public class HabitatLucha extends JPanel{
     public void update(){
         for (int i = 0; i < lucha.getSize(); i++){
             lucha.getPokemon(i).refrescarEstado();
+            if (lucha.getPokemon(i).isEstaComiendo()){
+                lucha.getPokemon(i).comer(comedero.getComida());
+
+            }
         }
     }
 }

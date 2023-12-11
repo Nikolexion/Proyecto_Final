@@ -86,6 +86,10 @@ public class HabitatBosque extends JPanel{
     public void update(){
         for (int i = 0; i < bosque.getSize(); i++){
             bosque.getPokemon(i).refrescarEstado();
+            if (bosque.getPokemon(i).isEstaComiendo()){
+                bosque.getPokemon(i).comer(comedero.getComida());
+
+            }
         }
     }
 }

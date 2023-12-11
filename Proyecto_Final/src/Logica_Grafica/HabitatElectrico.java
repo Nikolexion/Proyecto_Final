@@ -86,6 +86,10 @@ public class HabitatElectrico extends JPanel{
     public void update(){
         for (int i = 0; i < electrico.getSize(); i++){
             electrico.getPokemon(i).refrescarEstado();
+            if (electrico.getPokemon(i).isEstaComiendo()){
+                electrico.getPokemon(i).comer(comedero.getComida());
+
+            }
         }
     }
 }

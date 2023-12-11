@@ -85,6 +85,10 @@ public class HabitatPrado extends JPanel{
     public void update(){
         for (int i = 0; i < prado.getSize(); i++){
             prado.getPokemon(i).refrescarEstado();
+            if (prado.getPokemon(i).isEstaComiendo()){
+                prado.getPokemon(i).comer(comedero.getComida());
+
+            }
         }
     }
 }

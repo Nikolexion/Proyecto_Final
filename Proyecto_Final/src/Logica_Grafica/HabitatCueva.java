@@ -86,6 +86,10 @@ public class HabitatCueva extends JPanel{
     public void update(){
         for (int i = 0; i < cueva.getSize(); i++){
             cueva.getPokemon(i).refrescarEstado();
+            if (cueva.getPokemon(i).isEstaComiendo()){
+                cueva.getPokemon(i).comer(comedero.getComida());
+
+            }
         }
     }
 }

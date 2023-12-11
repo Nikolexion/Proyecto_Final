@@ -85,6 +85,10 @@ public class HabitatSetas extends JPanel{
     public void update(){
         for (int i = 0; i < setas.getSize(); i++){
             setas.getPokemon(i).refrescarEstado();
+            if (setas.getPokemon(i).isEstaComiendo()){
+                setas.getPokemon(i).comer(comedero.getComida());
+
+            }
         }
     }
 }

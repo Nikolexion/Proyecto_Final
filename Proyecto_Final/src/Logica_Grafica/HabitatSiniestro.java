@@ -85,6 +85,10 @@ public class HabitatSiniestro extends JPanel{
     public void update(){
         for (int i = 0; i < siniestro.getSize(); i++){
             siniestro.getPokemon(i).refrescarEstado();
+            if (siniestro.getPokemon(i).isEstaComiendo()){
+                siniestro.getPokemon(i).comer(comedero.getComida());
+
+            }
         }
     }
 }
