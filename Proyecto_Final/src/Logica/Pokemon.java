@@ -9,7 +9,10 @@ import java.awt.*;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
-
+/**
+ * Clase que se encarga de representar a los pokemon, el cual ocupa un patron de diseño "State" para poder tener seguimiento
+ * del hambre de los pokemon, la clase ademas guarda el nombre, imagen y tipo de pokemon
+ * */
 public class Pokemon {
     private String nombre;
     private Image image;
