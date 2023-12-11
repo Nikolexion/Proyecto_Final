@@ -5,15 +5,12 @@ import java.awt.*;
  * Clase generica de Comida, de la cual se heredan distintos metodos usados por los distintos tipos de Comida
  * */
 public abstract class Comida {
-    private boolean Comido;
     private Image imagen;
     private EnumComidas enumComidas;
     public Comida(Image image, EnumComidas enumComidas) {
         this.imagen = image;
-        this.Comido = false;
         this.enumComidas = enumComidas;
     }
-    abstract void comer();
     public Image getImagen(){
         return imagen;
     }
