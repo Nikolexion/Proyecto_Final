@@ -5,7 +5,9 @@ import Logica.Habitat.Cueva;
 
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * Panel encargado de la administracion del habitat cueva junto con su comida y pokemones
+ * */
 public class HabitatCueva extends JPanel{
     Cueva cueva;
     private Zona zona, zonaComedero;

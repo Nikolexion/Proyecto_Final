@@ -5,7 +5,9 @@ import Logica.Habitat.Lava;
 
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * Panel encargado de la administracion del habitat lava junto con su comida y pokemones
+ * */
 public class HabitatLava extends JPanel{
     Lava lava;
     private Zona zona, zonaComedero;

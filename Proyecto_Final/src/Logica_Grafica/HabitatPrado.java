@@ -5,7 +5,9 @@ import Logica.Habitat.Prado;
 
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * Panel encargado de la administracion del habitat prado junto con su comida y pokemones
+ * */
 public class HabitatPrado extends JPanel{
     Prado prado;
     private Zona zona, zonaComedero;

@@ -5,7 +5,9 @@ import Logica.Habitat.Siniestro;
 
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * Panel encargado de la administracion del habitat siniestro junto con su comida y pokemones
+ * */
 public class HabitatSiniestro extends JPanel{
     Siniestro siniestro;
     private Zona zona, zonaComedero;

@@ -8,7 +8,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.util.Objects;
-
+/**
+ * Panel encargado de administrar todos los paneles habitats e hilar la logica entre habitats, pokemones y comida
+ * */
 public class PanelHabitat extends JPanel {
     PanelMenuVert panelMenuVert;
     private HabitatAgua HabitatAgua;

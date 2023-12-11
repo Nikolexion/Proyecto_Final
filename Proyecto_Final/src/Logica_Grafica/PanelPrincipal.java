@@ -7,7 +7,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
+/**
+ * Panel encargado de juntar los demás paneles y ejecutar la ventana emergente, delegando las llamadas a paint a
+ * los demas sub paneles
+ * */
 public class PanelPrincipal extends JPanel {
     PanelHabitat panelHabitat;
     PanelMenuVert panelMenuVert;

@@ -6,7 +6,10 @@ import Logica.Comidas.EventListener;
 import java.awt.*;
 import java.awt.image.ImageObserver;
 import java.util.ArrayList;
-
+/**
+ * Clase que se encarga de dibujar la comida dentro de los habitats ocupando el patron de diseño "Observer",
+ * donde vista comida está suscrito a "Comedero"
+ * */
 public class VistaComida implements ImageObserver, EventListener {
     private Graphics g;
     private int x, y;

@@ -6,7 +6,9 @@ import Logica.Excepciones.HabitatNoPermitePokemon;
 
 import java.awt.*;
 import java.util.ArrayList;
-
+/**
+ * Clase generica de los habitat, de la cual se heradan multiples metodos utiles para el manejo de las demas clases
+ * */
 public abstract class Habitat {
     private Image image;
     private Comedero comedero;

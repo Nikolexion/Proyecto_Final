@@ -4,7 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * Panel encargado del menu horizontal, donde se encuentra una guia de uso, alertas de comida y mas
+ * */
 public class PanelMenuHorz extends JPanel {
 
     private Image menu;

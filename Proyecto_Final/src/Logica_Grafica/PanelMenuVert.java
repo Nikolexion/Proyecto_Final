@@ -10,7 +10,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * Panel encargado de la parte del menú vertical, donde se manejan las listas para comprar pokemones y mas cosas
+ * */
 public class PanelMenuVert extends JPanel implements EventListener {
     private static PanelMenuVert panelMenuVert;
     JComboBox<String> listaAgua,listaBosque,listaCielo,listaCueva,listaElectrico,listaHielo,listaHumedal,listaLava,listaLucha,listaPrado,
@@ -19,8 +21,7 @@ public class PanelMenuVert extends JPanel implements EventListener {
     ColocarComida colocarComida;
     Inventario inventario;
     ImageIcon imagenLatano,imagenPinia,imagenFrambu,imagenPokocho;
-    Pokemon pkmn1, pkmn2, pkmn3, pkmn4, pkmn5;
-    private Image menu;
+    Pokemon pkmn1;
     private  PanelMenuVert() {
         this.iniciarListas();
         this.iniciarComidas();
@@ -29,8 +30,6 @@ public class PanelMenuVert extends JPanel implements EventListener {
     }
     public void paint(Graphics g){
         super.paint(g);
-        menu = new ImageIcon("resources/MenuBackground.png").getImage();
-//        g.drawImage(menu,0,0,250,880,this);
         g.setColor(Color.CYAN);
         g.fillRect(5,0,230,30);
         g.setColor(Color.BLACK);

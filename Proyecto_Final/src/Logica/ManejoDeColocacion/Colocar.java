@@ -1,5 +1,8 @@
 package Logica.ManejoDeColocacion;
-
+/**
+ * Clase que se encarga de la colocacion de objetos, el cual activa un booleano cuando se está colocando el objeto
+ * y que contiene las coordenadas de los click hechos por el usuario para saber si hizo click dentro de una zona de interés
+ * */
 abstract public class Colocar {
     private boolean colocar;
     private int x, y;

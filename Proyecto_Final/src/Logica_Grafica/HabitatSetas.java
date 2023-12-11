@@ -5,7 +5,9 @@ import Logica.Habitat.Setas;
 
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * Panel encargado de la administracion del habitat setas junto con su comida y pokemones
+ * */
 public class HabitatSetas extends JPanel{
     Setas setas;
     private Zona zona, zonaComedero;

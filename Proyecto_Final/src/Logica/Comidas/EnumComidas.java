@@ -4,7 +4,10 @@ import Logica.*;
 
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * Enum encargado de encapsular el nombre de las distintas comidas, precio(El cual no pudo ser implementado) y la imagen de
+ * cada tipo de comida
+ * */
 public enum EnumComidas {
     POKOCHO("Pokocho", 200, "resources/pokocho.png"),
     FRAMBU("Frambu", 200, "resources/Baya_Frambu.png"),

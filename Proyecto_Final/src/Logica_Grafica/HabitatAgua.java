@@ -8,7 +8,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
-
+/**
+ * Panel encargado de la administracion del habitat agua junto con su comida y pokemones
+ * */
 public class HabitatAgua extends JPanel {
     public Agua agua;
     private Zona zona, zonaComedero;

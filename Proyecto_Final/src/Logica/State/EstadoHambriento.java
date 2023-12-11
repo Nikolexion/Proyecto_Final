@@ -2,7 +2,10 @@ package Logica.State;
 
 import Logica.Comidas.Comida;
 import Logica.Pokemon;
-
+/**
+ * Clase que implementa EstadoPokemon siguiendo el patron de diseño "State" el cual representa el estado hambriento, al cual se
+ * llega despues de estar 10 segundos en el estado normal
+ * */
 public class EstadoHambriento implements EstadoPokemon{
     private Pokemon pokemon;
     private float yVelocity = -2F;

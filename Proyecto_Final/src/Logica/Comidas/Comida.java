@@ -1,7 +1,9 @@
 package Logica.Comidas;
 
 import java.awt.*;
-
+/**
+ * Clase generica de Comida, de la cual se heredan distintos metodos usados por los distintos tipos de Comida
+ * */
 public abstract class Comida {
     private boolean Comido;
     private Image imagen;

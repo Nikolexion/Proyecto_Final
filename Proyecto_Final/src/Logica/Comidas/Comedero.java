@@ -8,7 +8,10 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
-
+/**
+ *  Clase que implementa EventManager, siguiendo el patron de diseño "Observer", el cual notifica a todos sus seguidores cuando se
+ *  añade comida
+ * */
 public class Comedero implements EventManager{
     public ArrayList<Comida> comedero;
     private Image image;

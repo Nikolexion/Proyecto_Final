@@ -5,7 +5,9 @@ import Logica.Habitat.Lucha;
 
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * Panel encargado de la administracion del habitat lucha junto con su comida y pokemones
+ * */
 public class HabitatLucha extends JPanel{
     Lucha lucha;
     private Zona zona, zonaComedero;

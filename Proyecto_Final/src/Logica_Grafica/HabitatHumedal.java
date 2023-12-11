@@ -5,7 +5,9 @@ import Logica.Habitat.Humedal;
 
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * Panel encargado de la administracion del habitat humedal junto con su comida y pokemones
+ * */
 public class HabitatHumedal extends JPanel{
     Humedal humedal;
     private Zona zona, zonaComedero;

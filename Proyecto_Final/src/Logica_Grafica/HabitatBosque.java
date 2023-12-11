@@ -5,7 +5,9 @@ import Logica.Habitat.Bosque;
 
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * Panel encargado de la administracion del habitat bosque junto con su comida y pokemones
+ * */
 public class HabitatBosque extends JPanel{
     Bosque bosque;
     private Zona zona, zonaComedero;

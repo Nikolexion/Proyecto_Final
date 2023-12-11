@@ -2,7 +2,10 @@ package Logica;
 
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * Enum que abarca todos los pokemones usados en el pokezoo, encapsulando su nombre, precio (el cual no pudo ser utilizado por falta
+ * de tiempo), el enum relacionado al tipo de habitat y la direccion de su imagen respectiva
+ * */
 public enum DetallePokemon {
     SQUIRTLE("Squirtle", 100, Tipo.AGUA, "resources/Pokemones/Agua/Squirtle/Squirtle007.png"),
     WARTORTLE("Wartortle",200, Tipo.AGUA, "resources/Pokemones/Agua/Squirtle/Wartortle.png"),

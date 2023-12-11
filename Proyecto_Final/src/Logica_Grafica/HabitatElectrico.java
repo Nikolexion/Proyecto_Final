@@ -5,7 +5,9 @@ import Logica.Habitat.Electrico;
 
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * Panel encargado de la administracion del habitat electrico junto con su comida y pokemones
+ * */
 public class HabitatElectrico extends JPanel{
     Electrico electrico;
     private Zona zona, zonaComedero;

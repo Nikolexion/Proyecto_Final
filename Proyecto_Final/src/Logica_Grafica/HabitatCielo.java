@@ -5,7 +5,9 @@ import Logica.Habitat.Cielo;
 
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * Panel encargado de la administracion del habitat cielo junto con su comida y pokemones
+ * */
 public class HabitatCielo extends JPanel{
     Cielo cielo;
     private Zona zona, zonaComedero;

@@ -5,7 +5,9 @@ import Logica.Habitat.Hielo;
 
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * Panel encargado de la administracion del habitat hielo junto con su comida y pokemones
+ * */
 public class HabitatHielo extends JPanel{
     Hielo hielo;
     private Zona zona, zonaComedero;

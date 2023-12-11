@@ -1,7 +1,10 @@
 package Logica.State;
 
 import Logica.*;
-
+/**
+ *Clase que implementa EstadoPokemon siguiendo el patron de diseño "State", el cual representa el estado normal de los
+ * pokemon, sin hambre
+ * */
 public class EstadoNormal implements EstadoPokemon{
     private Pokemon pokemon;
     private float xVelocity = 0.5F;
