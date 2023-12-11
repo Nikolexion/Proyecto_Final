@@ -21,10 +21,10 @@ public class PanelMenuHorz extends JPanel {
         g.drawString("con todos los demas), luego agregue comida haciendo click en las comidas abajo a la izquierda y despues",
                 280,670);
         g.drawString("click en el habitat que quiere alimentar. Los habitat tienen un maximo de 5 pokemon.",280,685);
-        g.drawString("Tenga en consideración que el Habitat Agua, Electrico, Humedal le gusta Pinia",280,690);
-        g.drawString("Tenga en consideración que el Habitat Bosque, Cielo, Lucha le gusta Latano",280,695);
-        g.drawString("Tenga en consideración que el Habitat Cueva, Lava, Siniestro le gusta Pokocho",280,700);
-        g.drawString("Tenga en consideración que el Habitat Hielo, Prado, Setas le gusta Frambu",280,705);
+        g.drawString("Tenga en consideración que el Habitat Agua, Electrico, Humedal le gusta Pinia",280,700);
+        g.drawString("Tenga en consideración que el Habitat Bosque, Cielo, Lucha le gusta Latano",280,715);
+        g.drawString("Tenga en consideración que el Habitat Cueva, Lava, Siniestro le gusta Pokocho",280,730);
+        g.drawString("Tenga en consideración que el Habitat Hielo, Prado, Setas le gusta Frambu",280,745);
 
     }
 
