@@ -6,8 +6,6 @@ import Logica.State.*;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -19,9 +17,6 @@ public class Pokemon {
     private EstadoPokemon estadoActual;
     private boolean estaNormal, estaHambriento, estaMuerto, estaComiendo;
     private Timer timer;
-    private long tiempoInicialMs, tiempoActualMs;
-    private long tiempoInicialEstadoNormal, tiempoActualEstadoNormal;
-    private long tiempoInicialEstadoHambriento, tiempoActualEstadoHambriento;
     public float x, y, xpkmn, ypkmn;
 
     public Pokemon (DetallePokemon pokemon){
@@ -113,29 +108,9 @@ public class Pokemon {
     public void setNoComiendo(){
         estaComiendo = false;
     }
-
-//    public void cambiarEstado(EstadoPokemon nuevoEstado) {
-//        if(getTiempoEstadoHambriento() > MS_PARA_CAMBIAR_ESTADO*2){
-//            this.estadoActual = new EstadoMuerto(this);
-//            return;
-//        }
-//        if(MS_PARA_CAMBIAR_ESTADO < getTiempoEstadoHambriento() && getTiempoEstadoHambriento() <= MS_PARA_CAMBIAR_ESTADO*2){
-//            this.estadoActual = new EstadoHambriento(this);
-//            return;
-//        }
-//        this.estadoActual = new EstadoNormal(this);
-//    }
-
     public void actuar() {
         estadoActual.actuar();
     }
-    //    public long getTiempoEstadoHambriento(){
-//        return tiempoActualEstadoHambriento - tiempoInicialEstadoHambriento;
-//    }
-//    public void iniciaEstadoHambriento(){
-//        tiempoInicialEstadoHambriento = System.currentTimeMillis();
-//        tiempoActualEstadoHambriento = tiempoInicialEstadoHambriento;
-//    }
     public void setCoords(int x, int y){
         this.x = x;
         this.y = y;
