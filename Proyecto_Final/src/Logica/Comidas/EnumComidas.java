@@ -27,10 +27,6 @@ public enum EnumComidas {
         return nombre;
     }
 
-    public int getPrecio() {
-        return precio;
-    }
-
     public Image getImagen() {
         return imagen;
     }
